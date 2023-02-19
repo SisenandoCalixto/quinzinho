@@ -134,6 +134,7 @@ function definirLinks(){
 	link.egestao = 'https://novoegestao.tst.jus.br/'
 	link.extensao = obterLinkExtensao()
 	link.eCarta = obterLinkEcarta()
+	link.github = 'https://github.com/SisenandoCalixto/quinzinho/'
 	link.google = obterLinkGoogle()
 	link.pje = obterLinkPje()
 	link.tribunal = obterLinkTribunal()

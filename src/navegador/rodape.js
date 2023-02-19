@@ -157,6 +157,7 @@ function criarRodapeDePaginaDaExtensao(){
 
 		let rodapeLinks = criar('nav','','',rodape)
 
+		criarLinkDoRodape('github', '', 'GitHub deste Projeto',() => criarJanela(LINK.github))
 		criarLinkDoRodape('termos', '', 'Termos de Uso',abrirPaginaTermosDeUso)
 		criarLinkDoRodape('configuracoes', '', 'Configurações da extensão', abrirPaginaOpcoesDaExtensao)
 
