@@ -127,7 +127,7 @@ function abrirPaginaOpcoesDaExtensao(){
 function abrirPaginaTermosDeUso(){
 
 	criarJanela(
-		caminho('navegador/termos/termos.htm'),
+		caminho('navegador/termos/pagina.htm'),
 		'',
 		700,
 		600,
@@ -142,7 +142,7 @@ function abrirPaginaTermosDeUso(){
 function abrirPaginaConfiguracaoDoTribunal(){
 
 	criarJanela(
-		caminho('navegador/configuracoes/configuracoes.htm?instalacao=1'),
+		caminho('navegador/configuracoes/pagina.htm?instalacao=1'),
 		'',
 		700,
 		500,
