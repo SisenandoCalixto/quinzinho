@@ -1,2 +1,2 @@
-# quinzinho
-Assistente Virtual do TRT-15
+# Quinzinho
+Assistente Virtual do Tribunal Regional do Trabalho da 15ª Região
