@@ -1,0 +1,239 @@
+:root{
+
+	--extensao-icone-ativo:						url(/imagens/icones/extensao/ativo.svg);
+	--extensao-icone-branco:					url(/imagens/icones/extensao/branco.svg);
+	--extensao-icone-inativo:					url(/imagens/icones/extensao/inativo.svg);
+	--extensao-icone-advogado:				url(/imagens/icones/advogado.svg);
+	--extensao-icone-agenda:					url(/imagens/icones/agenda.svg);
+	--extensao-icone-arroba:					url(/imagens/icones/arroba.svg);
+	--extensao-icone-audiencia:				url(/imagens/icones/audiencia.svg);
+	--extensao-icone-cnc:							url(/imagens/icones/cnc.svg);
+	--extensao-icone-codigo:					url(/imagens/icones/codigo.svg);
+	--extensao-icone-correios:				url(/imagens/icones/correios.svg);
+	--extensao-icone-egestao:					url(/imagens/icones/egestao.svg);
+	--extensao-icone-engrenagem:			url(/imagens/icones/engrenagem.svg);
+	--extensao-icone-exe15:						url(/imagens/icones/exe15.svg);
+	--extensao-icone-gigs:						url(/imagens/icones/gigs.svg);
+	--extensao-icone-i:								url(/imagens/icones/i.svg);
+	--extensao-icone-intranet:				url(/imagens/icones/intranet.svg);
+	--extensao-icone-lupa:						url(/imagens/icones/lupa.svg);
+	--extensao-icone-adicao:					url(/imagens/icones/operador-adicao.svg);
+	--extensao-icone-divisao:					url(/imagens/icones/operador-divisao.svg);
+	--extensao-icone-multiplicacao:		url(/imagens/icones/operador-multiplicacao.svg);
+	--extensao-icone-subtracao:				url(/imagens/icones/operador-subtracao.svg);
+	--extensao-icone-painel:					url(/imagens/icones/painel.svg);
+	--extensao-icone-pericias:				url(/imagens/icones/pericias.svg);
+	--extensao-icone-pje:							url(/imagens/icones/pje.svg);
+	--extensao-icone-seta:						url(/imagens/icones/seta.svg);
+	--extensao-icone-termos:					url(/imagens/icones/termos.svg);
+	--extensao-icone-trt:							url(/imagens/icones/trt.svg);
+	--extensao-icone-wikivt:					url(/imagens/icones/wikivt.svg);
+
+}
+
+
+botao.trt{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-trt) no-repeat center / 65% 65%,
+		rgba(var(--extensao-cor-branco),1)
+	;
+}
+
+
+botao.egestao{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-egestao) no-repeat center / 70% 70%,
+		var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-preto),1)
+	;
+}
+
+botao.audiencias{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-audiencia) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-laranja),1)
+	;
+}
+
+botao.designacoes{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-audiencia) no-repeat center / 70% 70%,
+		var(--extensao-cor-escurecer),
+		var(--extensao-cor-escurecer),
+		rgba(var(--extensao-cor-verde),1)
+	;
+}
+
+botao.pje-instancia-1{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-pje) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-branco),1)
+	;
+}
+
+botao.pje-instancia-2{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-pje) no-repeat center / 70% 70%,
+    var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-preto),1)
+	;
+}
+
+botao.pje1{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-pje) no-repeat center / 70% 70%,
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-amarelo),1)
+	;
+}
+
+botao.pje-painel-global{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-painel) no-repeat center / 70% 70%,
+		var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-preto),1)
+	;
+}
+
+botao.gigs{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-gigs) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-vermelho),1)
+	;
+}
+
+botao.mail{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-arroba) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-vermelho),1)
+	;
+}
+
+botao.exe15{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-exe15) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-laranja),1)
+	;
+}
+
+botao.pericias{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-pericias) no-repeat center / 70% 70%,
+		var(--extensao-cor-escurecer),
+		rgba(var(--extensao-cor-amarelo),1)
+	;
+}
+
+botao.correios{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-correios) no-repeat center / 70% 70%,
+		var(--extensao-cor-escurecer),
+		rgba(var(--extensao-cor-amarelo),1)
+	;
+}
+
+botao.pje-consulta-processos{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-lupa) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-azul),1)
+	;
+}
+
+botao.pje-consulta-pessoa{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-agenda) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-indigo),1)
+	;
+}
+
+botao.intranet{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-intranet) no-repeat center / 70% 70%,
+		rgba(var(--extensao-cor-violeta),1)
+	;
+}
+
+botao.pje-consulta-advogado{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-advogado) no-repeat center / 70% 70%,
+		var(--extensao-cor-escurecer),
+		var(--extensao-cor-escurecer),
+		rgba(var(--extensao-cor-violeta),1)
+	;
+}
+
+botao.pje-modelos-de-documentos{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-codigo) no-repeat center / 70% 70%,
+		var(--extensao-cor-escurecer),
+		var(--extensao-cor-escurecer),
+		rgba(var(--extensao-cor-verde),1)
+	;
+}
+
+botao.wikivt{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-wikivt) no-repeat center / 70% 70%,
+		var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-preto),1)
+	;
+}
+
+botao.proad{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		rgba(var(--extensao-cor-azul),1)
+	;
+}
+
+botao.pje-calc{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-pje) no-repeat center / 50% 50%,
+		var(--extensao-icone-adicao) no-repeat 5px 5px / 10px 10px,
+		var(--extensao-icone-subtracao) no-repeat 5px 35px / 10px 10px,
+		var(--extensao-icone-multiplicacao) no-repeat 35px 5px / 10px 10px,
+		var(--extensao-icone-divisao) no-repeat 35px 35px / 10px 10px,
+		rgba(var(--extensao-cor-indigo),1)
+	;
+}
+
+botao.cnc{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-cnc) no-repeat center / 70% 70%,
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-amarelo),1)
+	;
+}
