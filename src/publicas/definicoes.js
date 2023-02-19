@@ -4,7 +4,6 @@
 
 
 var
-	ASSINANTE = false,
 	CONFIGURACAO = {},
 	DATA = definirDatas(),
 	EXPRESSAO = definirExpressoesRegulares(),
@@ -31,8 +30,6 @@ async function definicoesGlobais(){
 	definirChavesPrimariasDoArmazenamento()
 
 	//	MODO.relatar = true
-	ASSINANTE = true
-	//ASSINANTE = CONFIGURACAO?.chave || false
 	LINK = definirLinks()
 
 	relatar('CONFIGURACAO:',CONFIGURACAO) //CONTÉM TODO O STORAGE

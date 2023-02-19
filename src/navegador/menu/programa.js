@@ -13,7 +13,6 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 	definicoesGlobais()
 
 	console.debug('CONFIGURACAO: ',CONFIGURACAO)
-	console.debug('ASSINANTE: ',ASSINANTE)
 
 	criarCabecalhoDePaginaDaExtensao()
 	definirEstadoDaExtensao()

@@ -82,13 +82,13 @@
 	],
 
 	"options_ui":{
-		"page": "navegador/configuracoes/configuracoes.htm",
+		"page": "navegador/configuracoes/pagina.htm",
 		"open_in_tab": true
 	},
 
 	"action":{
 		"browser_style":	true,
-		"default_popup": 	"navegador/menu/menu.htm"
+		"default_popup": 	"navegador/menu/pagina.htm"
 	}
 
 }

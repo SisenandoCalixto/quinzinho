@@ -5,6 +5,7 @@ async function configuracoes(){
 	let armazenamento = await browser.storage.local.get()
 
 	CONFIGURACAO = armazenamento
+	console.debug('CONFIGURACAO:',CONFIGURACAO)
 
 	let instalacao = obterUrlParametro('instalacao')
 
