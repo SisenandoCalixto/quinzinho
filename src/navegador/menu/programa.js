@@ -140,6 +140,16 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 			() => criarJanela(LINK.pje.consulta.advogado)
 		)
 
+		secao = selecionar('#definicoes')
+		
+		criarBotaoDoMenu(
+			'configuracao-magistrado',
+			'Configurações de Juízo',
+			abrirPaginaConfiguracoesJuizo
+		)
+
+
+
 		function criarBotaoDoMenu(
 			id = '',
 			titulo = '',
