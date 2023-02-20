@@ -22,14 +22,14 @@ label
 }
 
 .ativador input:checked + span{
-	color:rgba(var(--extensao-cor-preto),0.8);
+	color:rgba(var(--quinzinho-cor-preto),0.8);
 	text-shadow:none;
 }
 
 .ativador input:not(:checked) + span,
 .ativador input:not(:checked) + span:before
 {
-	color:rgba(var(--extensao-cor-branco),0.8);
+	color:rgba(var(--quinzinho-cor-branco),0.8);
 }
 
 .ativador,
@@ -43,22 +43,22 @@ label
 }
 
 .ativador input:checked + span{
-	background:rgba(var(--extensao-cor-branco),1);
+	background:rgba(var(--quinzinho-cor-branco),1);
 }
 
 .ativador span:after,
 .ativador input:checked + span:after,
 .ativador input:not(:checked) + span:after
 {
-	background:rgba(var(--extensao-cor-primaria),0.9);
+	background:rgba(var(--quinzinho-cor-primaria),0.9);
 }
 
 .ativador input:not(:checked) + span{
-	background:rgba(var(--extensao-cor-preto),0.6);
+	background:rgba(var(--quinzinho-cor-preto),0.6);
 }
 
 .ativador input:not(:checked) + span:after{
-	background:rgba(var(--extensao-cor-vermelho),0.9);
+	background:rgba(var(--quinzinho-cor-vermelho),0.9);
 	left:23px;
 }
 
@@ -79,7 +79,7 @@ label
 .ativador span,
 .ativador span:after
 {
-	box-shadow:0 6px 4px -4px rgba(var(--extensao-cor-preto),0.5);
+	box-shadow:0 6px 4px -4px rgba(var(--quinzinho-cor-preto),0.5);
 }
 
 .ativador span{
@@ -87,7 +87,7 @@ label
 	line-height:26px;
 	overflow:hidden;
 	text-align:center;
-	text-shadow:1px 2px 3px rgba(var(--extensao-cor-preto),0.5);
+	text-shadow:1px 2px 3px rgba(var(--quinzinho-cor-preto),0.5);
 	transition:background 0.5s ease-in-out,color 0.5s ease,right 0.7s;
 }
 
