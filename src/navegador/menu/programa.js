@@ -145,7 +145,7 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 		criarBotaoDoMenu(
 			'configuracao-magistrado',
 			'Configurações de Juízo',
-			() => criarJanela(LINK.pje.consulta.advogado)
+			abrirPaginaConfiguracoesJuizo
 		)
 
 

@@ -154,6 +154,21 @@ function abrirPaginaConfiguracaoDoTribunal(){
 }
 
 
+function abrirPaginaConfiguracoesJuizo(){
+
+	criarJanela(
+		caminho('navegador/juizo/pagina.htm?instalacao=1'),
+		'',
+		700,
+		500,
+		0,
+		0,
+		'detached_panel'
+	)
+
+}
+
+
 function definirIconeDaExtensaoPeloEstado(ativada){
 
 	if(

@@ -25,7 +25,7 @@ function criarCabecalhoDePaginaDaExtensao(){
 				h1{
 					background:
 						var(--extensao-gradiente-branco-preto),
-						var(--extensao-icone-branco) no-repeat 7px center,
+						var(--extensao-icone-ativo) no-repeat 7px center,
 						rgba(var(--extensao-cor-preto),0.8)
 					;
 					background-size:30px;
