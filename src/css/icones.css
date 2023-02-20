@@ -5,10 +5,12 @@
 	--extensao-icone-inativo:					url(/imagens/icones/extensao/inativo.svg);
 	--extensao-icone-advogado:				url(/imagens/icones/advogado.svg);
 	--extensao-icone-agenda:					url(/imagens/icones/agenda.svg);
+	--extensao-icone-apontador:				url(/imagens/icones/apontador.svg);
 	--extensao-icone-arroba:					url(/imagens/icones/arroba.svg);
 	--extensao-icone-audiencia:				url(/imagens/icones/audiencia.svg);
 	--extensao-icone-cnc:							url(/imagens/icones/cnc.svg);
 	--extensao-icone-codigo:					url(/imagens/icones/codigo.svg);
+	--extensao-icone-configuracoes:		url(/imagens/icones/configuracoes.svg);
 	--extensao-icone-correios:				url(/imagens/icones/correios.svg);
 	--extensao-icone-egestao:					url(/imagens/icones/egestao.svg);
 	--extensao-icone-engrenagem:			url(/imagens/icones/engrenagem.svg);
@@ -22,6 +24,7 @@
 	--extensao-icone-divisao:					url(/imagens/icones/operador-divisao.svg);
 	--extensao-icone-multiplicacao:		url(/imagens/icones/operador-multiplicacao.svg);
 	--extensao-icone-subtracao:				url(/imagens/icones/operador-subtracao.svg);
+	--extensao-icone-martelo:					url(/imagens/icones/martelo.svg);
 	--extensao-icone-painel:					url(/imagens/icones/painel.svg);
 	--extensao-icone-pericias:				url(/imagens/icones/pericias.svg);
 	--extensao-icone-pje:							url(/imagens/icones/pje.svg);
@@ -46,6 +49,17 @@ botao.egestao{
 	background:
 		var(--extensao-gradiente-branco-preto),
 		var(--extensao-icone-egestao) no-repeat center / 70% 70%,
+		var(--extensao-cor-clarear),
+		rgba(var(--extensao-cor-preto),1)
+	;
+}
+
+botao.configuracao-magistrado{
+	background:
+		var(--extensao-gradiente-branco-preto),
+		var(--extensao-icone-apontador) no-repeat 5px 5px / 45% 45%,
+		var(--extensao-icone-engrenagem) no-repeat 33px 5px / 12px 12px,
+		var(--extensao-icone-martelo) no-repeat center 25px / 50% 50%,
 		var(--extensao-cor-clarear),
 		rgba(var(--extensao-cor-preto),1)
 	;
