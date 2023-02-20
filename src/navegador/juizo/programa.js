@@ -1,6 +1,6 @@
-window.addEventListener('load',termosDeUso)
+window.addEventListener('load',programa)
 
-async function termosDeUso(){
+async function programa(){
 
 	let armazenamento = await browser.storage.local.get()
 
@@ -12,4 +12,30 @@ async function termosDeUso(){
 	definirEstadoDaExtensao()
 	criarRodapeDePaginaDaExtensao()
 
+	INFORMACOES = await obterInformacoes()
+
+
+	listarPerfis()
+	console.info('INFORMACOES:',INFORMACOES)
+
+
+}
+
+async function obterInformacoes(){
+	let informacoes = {}
+	informacoes.perfis = await pjeApiObterPerfis()
+	return informacoes
+}
+
+function listarPerfis(){
+	let secao = selecionar('section')
+	INFORMACOES.perfis.forEach(
+		perfil => {
+			console.debug('perfil',perfil)
+			let id = perfil.idOrgaoJulgador
+			let titulo = perfil.orgaoJulgador.trim()
+			criarBotao(id,'',secao,titulo)
+			
+		}
+	)
 }

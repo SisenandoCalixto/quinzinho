@@ -6,6 +6,8 @@
 
 async function pje(){
 
+	console.info('JANELA:',JANELA)
+	console.info('CONFIGURACAO:',CONFIGURACAO)
 	if(!JANELA.includes(LINK.pje.raiz)) return
 
 	INFORMACOES = await obterInformacoes()
@@ -14,7 +16,7 @@ async function pje(){
 
 	async function obterInformacoes(){
 		let informacoes = {}
-		informacoes.perfil = await pjeApiObterPerfil()
+		informacoes.perfil = await pjeApiObterPerfis()
 		informacoes.idOrgaoJulgador = informacoes?.perfil?.idOrgaoJulgador || ''
 		return informacoes
 	}

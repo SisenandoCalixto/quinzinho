@@ -153,21 +153,16 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 		function criarBotaoDoMenu(
 			id = '',
 			titulo = '',
-			acao = '',
+			aoClicar = '',
 			texto = ''
 		){
-			let botao = criar('botao',id,'link legenda',secao)
-			if(id){
-				botao.id = id
-				botao.classList.add(id)
-			}
-			botao.addEventListener('contextmenu',elemento => elemento.preventDefault())
-			if(acao) botao.addEventListener('click',acao)
-			if(titulo) botao.setAttribute('aria-label',titulo)
-			if(texto) botao.innerText = texto
+			//let botao = criar('botao',id,'link legenda',secao)
+			let botao = criarBotao(id,'link legenda',secao,texto,titulo,aoClicar)
+			if(id) botao.classList.add(id)
 		}
 
 	}
 
 
 }
+
