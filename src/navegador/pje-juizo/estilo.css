@@ -31,6 +31,12 @@ h2{
 	width:95%;
 }
 
+h3{
+	display:block;
+	margin:1rem auto;
+	width:95%;
+}
+
 label{
 	color:rgba(var(--extensao-cor-branco),1);
 	margin:0;
