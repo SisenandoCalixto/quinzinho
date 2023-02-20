@@ -148,21 +148,17 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 			abrirPaginaConfiguracoesJuizo
 		)
 
-
-
 		function criarBotaoDoMenu(
 			id = '',
 			titulo = '',
 			aoClicar = '',
 			texto = ''
 		){
-			//let botao = criar('botao',id,'link legenda',secao)
 			let botao = criarBotao(id,'link legenda',secao,texto,titulo,aoClicar)
 			if(id) botao.classList.add(id)
 		}
 
 	}
-
 
 }
 

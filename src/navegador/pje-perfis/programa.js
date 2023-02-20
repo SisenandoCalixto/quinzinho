@@ -33,9 +33,8 @@ function listarPerfis(){
 		perfil => {
 			console.debug('perfil',perfil)
 			let id = perfil.idOrgaoJulgador
-			let titulo = perfil.orgaoJulgador.trim()
-			criarBotao(id,'',secao,titulo)
-			
+			let nome = perfil.orgaoJulgador.trim()
+			criarBotao('perfil-'+id,'',secao,nome,'',()=>abrirPaginaConfiguracaoJuizo(id,nome))
 		}
 	)
 }
