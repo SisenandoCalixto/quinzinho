@@ -157,13 +157,31 @@ function abrirPaginaConfiguracaoDoTribunal(){
 function abrirPaginaConfiguracoesJuizo(){
 
 	criarJanela(
-		caminho('navegador/juizo/pagina.htm?instalacao=1'),
+		caminho('navegador/pje-perfis/pagina.htm'),
 		'',
 		700,
-		500,
+		700,
 		0,
 		0,
 		'detached_panel'
+	)
+
+}
+
+
+function abrirPaginaConfiguracaoJuizo(
+	id='',
+	nome=''
+){
+
+	criarJanela(
+		caminho('navegador/pje-juizo/pagina.htm?id='+id+'&nome='+nome),
+		'',
+		750,
+		750,
+		0,
+		0,
+		'panel'
 	)
 
 }

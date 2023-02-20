@@ -337,6 +337,7 @@ function criarBotao(
 	if(estilo) estilizar(elemento,estilo)
 
 	elemento.setAttribute('aria-label',titulo)
+	elemento.addEventListener('contextmenu',elemento => elemento.preventDefault())
 
 	return elemento
 

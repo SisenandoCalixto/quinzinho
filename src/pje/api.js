@@ -10,6 +10,23 @@ function pjeApiRequisicaoConfiguracoes(){
 	}
 }
 
+async function pjeApiObterPerfis(){
+
+	let url = LINK.pje.api.seguranca + 'token/perfis'
+	relatar('Consultando API:',url)
+
+	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
+	let erro = pjeApiVerificarErro(resposta)
+	if(erro) throw new Error(erro)
+
+	let dados = await resposta.json()
+	relatar('Dados:',dados)
+
+	return dados || ''
+
+}
+
+
 
 async function pjeApiConsultaPublicaObterProcessoId(numero){
 
@@ -51,21 +68,6 @@ async function pjeApiObterProcessoExpedientesInstancia(
 }
 
 
-
-
-async function pjeApiObterPerfil(){
-
-	let url = LINK.pje.api.seguranca + 'token/perfis'
-	relatar('Consultando API:',url)
-
-	let resposta = await fetch(url)
-	let dados = await resposta.json()
-	let informacoes = dados[0] || ''
-
-	relatar('Dados:',informacoes)
-	return informacoes || ''
-
-}
 
 async function pjeApiObterProcessoTarefa(idProcesso){
 
