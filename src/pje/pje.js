@@ -12,6 +12,10 @@ async function pje(){
 
 	INFORMACOES = await obterInformacoes()
 
+	let id = pjeObterProcessoId()
+	PROCESSO = await new Processo(id)
+
+	console.info('PROCESSO',PROCESSO)
 	console.info('INFORMACOES:',INFORMACOES)
 
 	async function obterInformacoes(){
@@ -21,6 +25,16 @@ async function pje(){
 		return informacoes
 	}
 
+}
+
+
+function pjeObterProcessoId(){
+	let id = ''
+	EXPRESSAO.processoId = new RegExp(/(processo.*?[/](audiencias|detalhe|documento|pericias|tarefa)|pjekz.gigs.abrir.gigs.*)/,'gi')
+	let caminho = JANELA.match(EXPRESSAO.processoId) || ''
+	if(!caminho) return id
+	id = numeros(caminho.join()) || ''
+	return id
 }
 
 
@@ -54,3 +68,13 @@ function obterDadosDoNumeroDoProcesso(numero){
 }
 
 
+class Processo {
+  constructor(id){
+    return this.processo(id)
+  }
+  async processo(id){
+    let processo = await pjeApiObterProcessoDadosPrimarios(id)
+		Object.assign(processo,obterDadosDoNumeroDoProcesso(processo.numero))
+    return processo 
+  }
+}
