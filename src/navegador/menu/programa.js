@@ -23,6 +23,64 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 
 	async function criarLinksUteis(){
 
+		secao = selecionar('#pje')
+
+		criarBotaoDoMenu(
+			'pje-instancia-1',
+			'PJe - Painel -  1º Grau',
+			() => criarJanela(LINK.pje.raiz)
+		)
+		criarBotaoDoMenu(
+			'pje-instancia-2',
+			'PJe - Painel - 2º Grau',
+			() => criarJanela(LINK.pje.segundograu)
+		)
+		criarBotaoDoMenu(
+			'pje1',
+			'PJe - Versão 1.x - Painel',
+			() => criarJanela(LINK.pje.legado.painel)
+		)
+		criarBotaoDoMenu(
+			'pje-painel-global',
+			'PJe - Painel Global',
+			() => criarJanela(LINK.pje.painel.global)
+		)
+		criarBotaoDoMenu(
+			'gigs',
+			'PJe - Painel - Relatórios GIGS',
+			() => criarJanela(LINK.pje.painel.gigs)
+		)
+		criarBotaoDoMenu(
+			'audiencias',
+			'PJe - Painel - Audiências',
+			() => criarJanela(LINK.pje.painel.audiencias)
+		)
+		criarBotaoDoMenu(
+			'pericias',
+			'PJe - Painel - Perícias',
+			() => criarJanela(LINK.pje.painel.pericias)
+		)
+		criarBotaoDoMenu(
+			'pje-modelos-de-documentos',
+			'PJe - Painel - Modelos de Documentos',
+			() => criarJanela(LINK.pje.modelos)
+		)
+		criarBotaoDoMenu(
+			'pje-consulta-processos',
+			'PJe - Painel - Consultar Processos',
+			() => criarJanela(LINK.pje.consulta.processos)
+		)
+		criarBotaoDoMenu(
+			'pje-consulta-pessoa',
+			'PJe - Painel - Consutar Pessoa',
+			() => criarJanela(LINK.pje.consulta.pessoa)
+		)
+		criarBotaoDoMenu(
+			'pje-consulta-advogado',
+			'PJe - Painel - Consutar Advogado(a)',
+			() => criarJanela(LINK.pje.consulta.advogado)
+		)
+
 		secao = selecionar('#links-uteis')
 
 		criarBotaoDoMenu(
@@ -80,64 +138,6 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 			'intranet',
 			'Intranet',
 			() => criarJanela(LINK.pje.intranet)
-		)
-
-		secao = selecionar('#pje')
-
-		criarBotaoDoMenu(
-			'pje-instancia-1',
-			'PJe - Painel -  1º Grau',
-			() => criarJanela(LINK.pje.raiz)
-		)
-		criarBotaoDoMenu(
-			'pje-instancia-2',
-			'PJe - Painel - 2º Grau',
-			() => criarJanela(LINK.pje.segundograu)
-		)
-		criarBotaoDoMenu(
-			'pje1',
-			'PJe - Versão 1.x - Painel',
-			() => criarJanela(LINK.pje.legado.painel)
-		)
-		criarBotaoDoMenu(
-			'pje-painel-global',
-			'PJe - Painel Global',
-			() => criarJanela(LINK.pje.painel.global)
-		)
-		criarBotaoDoMenu(
-			'gigs',
-			'PJe - Painel - Relatórios GIGS',
-			() => criarJanela(LINK.pje.painel.gigs)
-		)
-		criarBotaoDoMenu(
-			'audiencias',
-			'PJe - Painel - Audiências',
-			() => criarJanela(LINK.pje.painel.audiencias)
-		)
-		criarBotaoDoMenu(
-			'pericias',
-			'PJe - Painel - Perícias',
-			() => criarJanela(LINK.pje.painel.pericias)
-		)
-		criarBotaoDoMenu(
-			'pje-modelos-de-documentos',
-			'PJe - Painel - Modelos de Documentos',
-			() => criarJanela(LINK.pje.modelos)
-		)
-		criarBotaoDoMenu(
-			'pje-consulta-processos',
-			'PJe - Painel - Consultar Processos',
-			() => criarJanela(LINK.pje.consulta.processos)
-		)
-		criarBotaoDoMenu(
-			'pje-consulta-pessoa',
-			'PJe - Painel - Consutar Pessoa',
-			() => criarJanela(LINK.pje.consulta.pessoa)
-		)
-		criarBotaoDoMenu(
-			'pje-consulta-advogado',
-			'PJe - Painel - Consutar Advogado(a)',
-			() => criarJanela(LINK.pje.consulta.advogado)
 		)
 
 		secao = selecionar('#definicoes')

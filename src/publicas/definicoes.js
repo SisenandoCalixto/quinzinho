@@ -21,7 +21,7 @@ var
 function definirTRT(){
 	let tribunal = {}
 	tribunal.regiao = '15'
-	tribunal.nome = 'Tribunal Regional do Trabalho da ' + tribunal.nome + 'ª Região'
+	tribunal.nome = 'Tribunal Regional do Trabalho da ' + tribunal.regiao + 'ª Região'
 	return tribunal
 }
 
