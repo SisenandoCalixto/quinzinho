@@ -45,6 +45,7 @@ async function magistrados(){
 			) => {
 				let chave = juizosPorOrgao[indice]
 				configuracao.value = chave || ''
+				configuracao.addEventListener('click',selecionarConteudo)
 			}
 		)
 
@@ -74,7 +75,7 @@ async function magistrados(){
 
 		await browser.storage.local.set({juizosPorOrgao})
 
-		recarregar()
+		setTimeout(fechar,500)
 
 	}
 

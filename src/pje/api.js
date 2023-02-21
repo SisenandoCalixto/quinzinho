@@ -1,11 +1,11 @@
-function pjeApiRequisicaoConfiguracoes(){
+function pjeApiRequisicaoConfiguracoes(instancia='1'){
 	return {
 		"method": "GET",
 		"mode": "cors",
 		"credentials": "include",
 		"headers": {
 			"Content-Type": "application/json",
-			"X-Grau-Instancia": "1"
+			"X-Grau-Instancia": instancia
 		}
 	}
 }

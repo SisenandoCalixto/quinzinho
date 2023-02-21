@@ -8,9 +8,8 @@ async function pje(){
 
 	console.info('JANELA:',JANELA)
 	console.info('CONFIGURACAO:',CONFIGURACAO)
-	if(!JANELA.includes(LINK.pje.raiz)) return
 
-	INFORMACOES = await obterInformacoes()
+	if(!JANELA.includes(LINK.pje.raiz)) return
 
 	let id = pjeObterProcessoId()
 	PROCESSO = await new Processo(id)
@@ -18,12 +17,7 @@ async function pje(){
 	console.info('PROCESSO',PROCESSO)
 	console.info('INFORMACOES:',INFORMACOES)
 
-	async function obterInformacoes(){
-		let informacoes = {}
-		informacoes.perfil = await pjeApiObterPerfis()
-		informacoes.idOrgaoJulgador = informacoes?.perfil?.idOrgaoJulgador || ''
-		return informacoes
-	}
+	pjeOtimizarConclusaoAMagistrado()
 
 }
 
@@ -65,6 +59,52 @@ function obterDadosDoNumeroDoProcesso(numero){
 
 	return processo
 
+}
+
+
+async function pjeOtimizarConclusaoAMagistrado(){
+
+	let selecao = await esperar('[placeholder="Magistrado"]',true)
+
+	await esperar('pje-concluso-tarefa-botao',true,true)
+
+	let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || ''
+	let orgaoJulgador = PROCESSO?.orgaoJulgador?.id || ''
+	let orgao = 'orgao' + orgaoJulgador
+	let magistrados = juizosPorOrgao[orgao] || []
+	let magistrado = magistrados[PROCESSO.final] || ''
+
+	/*
+	console.info('juizosPorOrgao',juizosPorOrgao)
+	console.info('orgaoJulgador',orgaoJulgador)
+	console.info('orgao',orgao)
+	console.info('magistrados',magistrados)
+	console.info('magistrado',magistrado)
+	*/	
+
+	if(!magistrado) return
+	if(selecao.textContent.includes(magistrado)) return
+
+	clicar('[placeholder="Magistrado"]')
+
+	pjeSelecionarOpcaoPorTexto(magistrado)
+
+}
+
+
+async function pjeSelecionarOpcaoPorTexto(
+	texto='',
+	parcial=false
+){
+	if(!texto) return ''
+	await esperar('mat-option',true,true)
+	let opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText == texto)[0] || ''
+	if(!opcao){
+		if(parcial)
+			opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText.includes(texto))[0] || ''
+	}
+	clicar(opcao)
+	return opcao
 }
 
 

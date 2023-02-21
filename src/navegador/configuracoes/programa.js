@@ -13,6 +13,8 @@ async function configuracoes(){
 	criarCabecalhoDePaginaDaExtensao()
 	criarRodapeDePaginaDaExtensao()
 	obterConfiguracoesDaExtensao()
+	exportarConfiguracoesDaExtensao()
+	importarConfiguracoesDaExtensao()
 
 	selecionar('#salvar').addEventListener(
 		'click',
@@ -30,4 +32,33 @@ async function configuracoes(){
 		}
 	)
 
+}
+
+function exportarConfiguracoesDaExtensao(){
+	let campoTexto = selecionar('.exportar')
+	let texto = JSON.stringify(CONFIGURACAO)
+	campoTexto.value = texto
+	campoTexto.addEventListener(
+		'click',
+		() => {
+			campoTexto.select()
+			copiar(campoTexto.value)
+		}
+	)
+}
+
+async function importarConfiguracoesDaExtensao(){
+	let botao = selecionar('#importar')
+	botao.addEventListener(
+		'click',
+		async () => {
+			let campoTexto = selecionar('.importar')
+			let texto = campoTexto.value
+			if(!texto) return
+			let armazenamento = JSON.parse(texto) || ''
+			if(!armazenamento) return
+			await browser.storage.local.set(armazenamento)
+			setTimeout(recarregar,250)
+		}
+	)
 }
