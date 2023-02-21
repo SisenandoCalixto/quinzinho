@@ -15,7 +15,7 @@ function criarCabecalhoDePaginaDaExtensao(){
 			cabecalho,
 			`
 				header{
-					background:rgba(var(--extensao-cor-primaria),1);
+					background:rgba(var(--quinzinho-cor-primaria),1);
 					height:auto;
 					position:fixed;
 					top:0;
@@ -24,12 +24,12 @@ function criarCabecalhoDePaginaDaExtensao(){
 				}
 				h1{
 					background:
-						var(--extensao-gradiente-branco-preto),
-						var(--extensao-icone-ativo) no-repeat 7px center,
-						rgba(var(--extensao-cor-preto),0.8)
+						var(--quinzinho-gradiente-branco-preto),
+						var(--quinzinho-icone-ativo) no-repeat 7px center,
+						rgba(var(--quinzinho-cor-preto),0.8)
 					;
 					background-size:30px;
-					color:rgba(var(--extensao-cor-branco),0.9);
+					color:rgba(var(--quinzinho-cor-branco),0.9);
 					font-size:18px;
 					line-height:40px;
 					text-align:center;

@@ -4,8 +4,8 @@ label[aria-label]:hover::before
 	animation:aparecer 0.1s ease-out 0s 1 both;
 	border-radius:5px;
 	content:attr(aria-label);
-	background-color:rgba(var(--extensao-cor-preto),0.9);
-	color:rgba(var(--extensao-cor-branco),1);
+	background-color:rgba(var(--quinzinho-cor-preto),0.9);
+	color:rgba(var(--quinzinho-cor-branco),1);
 	display:block;
 	font-size:0.9rem;
 	font-weight:600;
@@ -38,7 +38,7 @@ informacoes{
 	width:100%;
 }
 informacoes *{
-	color:rgba(var(--extensao-cor-branco));
+	color:rgba(var(--quinzinho-cor-branco));
 	display:block;
 	font-size:1.4rem;
 	font-style:normal;
@@ -55,8 +55,8 @@ informacoes i::before
 	z-index:9;
 }
 informacoes i::before{
-	background:var(--extensao-icone-i) center center / 70% 70% no-repeat;
-	border:rgba(var(--extensao-cor-laranja),1) solid 3px;
+	background:var(--quinzinho-icone-i) center center / 70% 70% no-repeat;
+	border:rgba(var(--quinzinho-cor-laranja),1) solid 3px;
 	border-radius:15px;
 	content:"";
 	left:1rem;
@@ -66,9 +66,9 @@ informacoes i::before{
 informacoes i:hover::before,
 informacoes i:hover::after
 {
-	background:rgba(var(--extensao-cor-preto),0.95);
+	background:rgba(var(--quinzinho-cor-preto),0.95);
 	border-radius:15px;
-	box-shadow:0px 2px 2px 2px rgba(var(--extensao-cor-preto), 0.3);
+	box-shadow:0px 2px 2px 2px rgba(var(--quinzinho-cor-preto), 0.3);
 	left:1rem;
 	position:absolute;
 	transition:all 0.5s ease-out;
@@ -78,19 +78,19 @@ informacoes i:hover::after
 }
 informacoes i:hover::before{
 	background:
-		var(--extensao-icone-i) center center / 70% 70% no-repeat,
-		rgba(var(--extensao-cor-preto),0.95)
+		var(--quinzinho-icone-i) center center / 70% 70% no-repeat,
+		rgba(var(--quinzinho-cor-preto),0.95)
 	;
 	animation:aparecer 0.5s ease-out 0s 1 both;
 }
 informacoes i:hover::after{
 	animation:aparecer 0.5s ease-out 0.6s 1 both;
-	border:rgba(var(--extensao-cor-laranja),1) solid 3px;
+	border:rgba(var(--quinzinho-cor-laranja),1) solid 3px;
 	content:attr(aria-label);
 	padding:20px;
 }
 informacoes a{
-	background:var(--extensao-icone-youtube) center center no-repeat;
+	background:var(--quinzinho-icone-youtube) center center no-repeat;
 	cursor:pointer;
 	height:30px;
 	opacity:0.9;
@@ -105,10 +105,10 @@ informacoes a:active{
 informacoes a:hover::before
 {
 	animation:aparecer 0.5s ease-out 0s 1 both;
-	background:rgba(var(--extensao-cor-preto),0.9);
-	border:rgba(var(--extensao-cor-vermelho),1) 3px solid;
+	background:rgba(var(--quinzinho-cor-preto),0.9);
+	border:rgba(var(--quinzinho-cor-vermelho),1) 3px solid;
 	border-radius:25px 0 25px 25px;
-	box-shadow:0px 2px 2px 2px rgba(var(--extensao-cor-preto), 0.3);
+	box-shadow:0px 2px 2px 2px rgba(var(--quinzinho-cor-preto), 0.3);
 	content:"Playlist do Youtube com vídeos relevantes sobre esta seção";
 	padding:20px;
 	position:absolute;

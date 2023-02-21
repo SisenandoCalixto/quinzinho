@@ -7,15 +7,16 @@ async function magistrados(){
 	CONFIGURACAO = armazenamento
 
 	let configuracoes = document.querySelectorAll('.configuracao')
+	let id = obterUrlParametro('id')
+	let nome = obterUrlParametro('nome') + ' (' + id + ')'
+	let orgao = 'orgao' + id
 
 	definicoesGlobais()
 	criarCabecalhoDePaginaDaExtensao()
 	criarRodapeDePaginaDaExtensao()
+	
+
 	obterConfiguracoes()
-
-	let id = obterUrlParametro('id')
-	let nome = obterUrlParametro('nome') + ' (' + id + ')'
-
 	identificar()
 
 	selecionar('#salvar').addEventListener(
@@ -33,13 +34,16 @@ async function magistrados(){
 
 	function obterConfiguracoes(){
 
+		let orgaos = CONFIGURACAO?.juizosPorOrgao || []
+		let juizosPorOrgao = orgaos[orgao] || []
+		console.debug('juizosPorOrgao',juizosPorOrgao)
+
 		configuracoes.forEach(
 			(
 				configuracao,
 				indice
 			) => {
-				return
-				let chave = CONFIGURACAO.pjeMagistrados[indice]
+				let chave = juizosPorOrgao[indice]
 				configuracao.value = chave || ''
 			}
 		)
@@ -48,24 +52,27 @@ async function magistrados(){
 
 	async function salvarConfiguracoes(){
 
-		return
-
-		let pjeMagistrados = []
+		let juizos = []
+		let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || {}
 
 		configuracoes.forEach(
 
 			configuracao => {
 
-				let magistrado = configuracao.value || ''
-				let nome = magistrado.trim()
+				let juizo = configuracao.value || ''
+				let nome = juizo.trim()
 
-				pjeMagistrados.push(nome)
+				juizos.push(nome)
 
 			}
 
 		)
 
-		await browser.storage.local.set({pjeMagistrados})
+		juizosPorOrgao[orgao] = juizos
+
+		console.debug('juizosPorOrgao',juizosPorOrgao)
+
+		await browser.storage.local.set({juizosPorOrgao})
 
 		recarregar()
 

@@ -15,12 +15,12 @@ function criarRodapeDePaginaDaExtensao(){
 			`
 				footer{
 					background:
-						var(--extensao-gradiente-branco-preto),
-						linear-gradient(0deg,rgba(var(--extensao-cor-preto),0.8) 0%,rgba(var(--extensao-cor-preto),0.8) 100%),
-						rgba(var(--extensao-cor-primaria),1)
+						var(--quinzinho-gradiente-branco-preto),
+						linear-gradient(0deg,rgba(var(--quinzinho-cor-preto),0.8) 0%,rgba(var(--quinzinho-cor-preto),0.8) 100%),
+						rgba(var(--quinzinho-cor-primaria),1)
 					;
 					bottom:0;
-					color:rgba(var(--extensao-cor-branco),0.9);
+					color:rgba(var(--quinzinho-cor-branco),0.9);
 					font-size:12px;
 					height:auto;
 					overflow:hidden;
@@ -65,7 +65,7 @@ function criarRodapeDePaginaDaExtensao(){
 
 				.icone:hover
 				{
-					background-color:rgba(var(--extensao-cor-branco),1);
+					background-color:rgba(var(--quinzinho-cor-branco),1);
 					height:26px;
 					opacity:1;
 					margin:2px;
@@ -83,10 +83,10 @@ function criarRodapeDePaginaDaExtensao(){
 				.icone:hover::before{
 					animation:aparecer 0.5s ease-out 0s 1 both;
 					border-radius:15px 15px 0 0;
-					box-shadow:0px 2px 2px 2px rgba(var(--extensao-cor-preto), 0.3);
+					box-shadow:0px 2px 2px 2px rgba(var(--quinzinho-cor-preto), 0.3);
 					content:attr(aria-label);
-					background-color:rgba(var(--extensao-cor-preto),0.9);
-					color:rgba(var(--extensao-cor-branco),1);
+					background-color:rgba(var(--quinzinho-cor-preto),0.9);
+					color:rgba(var(--quinzinho-cor-branco),1);
 					display:block;
 					font-size:12px;
 					font-weight:600;
@@ -99,31 +99,31 @@ function criarRodapeDePaginaDaExtensao(){
 				}
 
 				#configuracoes{
-					background:var(--extensao-icone-engrenagem);
+					background:var(--quinzinho-icone-engrenagem);
 				}
 				#github{
-					background:var(--extensao-icone-github);
+					background:var(--quinzinho-icone-github);
 				}
 				#pagina{
-					background:var(--extensao-icone-branco);
+					background:var(--quinzinho-icone-branco);
 				}
 				#pix{
-					background:var(--extensao-icone-pix);
+					background:var(--quinzinho-icone-pix);
 				}
 				#roadmap{
-					background:var(--extensao-icone-estrada);
+					background:var(--quinzinho-icone-estrada);
 				}
 				#telegram{
-					background:var(--extensao-icone-telegram);
+					background:var(--quinzinho-icone-telegram);
 				}
 				#termos{
-					background:var(--extensao-icone-termos) center center / 90% 90% no-repeat;
+					background:var(--quinzinho-icone-termos) center center / 90% 90% no-repeat;
 				}
 				#whatsapp{
-					background:var(--extensao-icone-whatsapp);
+					background:var(--quinzinho-icone-whatsapp);
 				}
 				#youtube{
-					background:var(--extensao-icone-youtube);
+					background:var(--quinzinho-icone-youtube);
 				}
 
 			`
