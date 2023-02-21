@@ -207,8 +207,12 @@ async function copiar(texto){
 
 
 function copiarConteudo(){
-	this.select()
+	selecionarConteudo()
 	copiar(this.value)
+}
+
+function selecionarConteudo(){
+	this.select()
 }
 
 

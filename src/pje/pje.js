@@ -8,9 +8,8 @@ async function pje(){
 
 	console.info('JANELA:',JANELA)
 	console.info('CONFIGURACAO:',CONFIGURACAO)
-	if(!JANELA.includes(LINK.pje.raiz)) return
 
-	INFORMACOES = await obterInformacoes()
+	if(!JANELA.includes(LINK.pje.raiz)) return
 
 	let id = pjeObterProcessoId()
 	PROCESSO = await new Processo(id)
@@ -18,12 +17,7 @@ async function pje(){
 	console.info('PROCESSO',PROCESSO)
 	console.info('INFORMACOES:',INFORMACOES)
 
-	async function obterInformacoes(){
-		let informacoes = {}
-		informacoes.perfil = await pjeApiObterPerfis()
-		informacoes.idOrgaoJulgador = informacoes?.perfil?.idOrgaoJulgador || ''
-		return informacoes
-	}
+	pjeOtimizarConclusaoAMagistrado()
 
 }
 
@@ -65,6 +59,34 @@ function obterDadosDoNumeroDoProcesso(numero){
 
 	return processo
 
+}
+
+
+
+
+async function pjeOtimizarConclusaoAMagistrado(){
+
+	let selecao = await esperar('[placeholder="Magistrado"]',true)
+
+	selecionarMagistradoPorFinadlDoProcesso()
+
+	async function selecionarMagistradoPorFinadlDoProcesso(){
+
+		await esperar('pje-concluso-tarefa-botao',true,true)
+
+		let magistrado = CONFIGURACAO?.pjeMagistrados[PROCESSO.digitoFinal] || ''
+		if(!magistrado)
+			return
+
+		if(selecao.textContent.includes(magistrado)){
+			concluir()
+			return
+		}
+
+		clicar('[placeholder="Magistrado"]')
+		pjeSelecionarOpcaoPorTexto(magistrado).then(concluir)
+
+	}
 }
 
 
