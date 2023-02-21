@@ -28,11 +28,8 @@
 		"scripts":[
 			"publicas/definicoes.js",
 			"publicas/relatar.js",
-			"publicas/classes.js",
-			"publicas/datas.js",
 			"publicas/dom.js",
 			"publicas/gerais.js",
-			"publicas/links.js",
 			"publicas/navegador.js",
 			"navegador/navegador.js"
 		]
