@@ -62,31 +62,49 @@ function obterDadosDoNumeroDoProcesso(numero){
 }
 
 
-
-
 async function pjeOtimizarConclusaoAMagistrado(){
 
 	let selecao = await esperar('[placeholder="Magistrado"]',true)
 
-	selecionarMagistradoPorFinadlDoProcesso()
+	await esperar('pje-concluso-tarefa-botao',true,true)
 
-	async function selecionarMagistradoPorFinadlDoProcesso(){
+	let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || ''
+	let orgaoJulgador = PROCESSO?.orgaoJulgador?.id || ''
+	let orgao = 'orgao' + orgaoJulgador
+	let magistrados = juizosPorOrgao[orgao] || []
+	let magistrado = magistrados[PROCESSO.final] || ''
 
-		await esperar('pje-concluso-tarefa-botao',true,true)
+	/*
+	console.info('juizosPorOrgao',juizosPorOrgao)
+	console.info('orgaoJulgador',orgaoJulgador)
+	console.info('orgao',orgao)
+	console.info('magistrados',magistrados)
+	console.info('magistrado',magistrado)
+	*/	
 
-		let magistrado = CONFIGURACAO?.pjeMagistrados[PROCESSO.digitoFinal] || ''
-		if(!magistrado)
-			return
+	if(!magistrado) return
+	if(selecao.textContent.includes(magistrado)) return
 
-		if(selecao.textContent.includes(magistrado)){
-			concluir()
-			return
-		}
+	clicar('[placeholder="Magistrado"]')
 
-		clicar('[placeholder="Magistrado"]')
-		pjeSelecionarOpcaoPorTexto(magistrado).then(concluir)
+	pjeSelecionarOpcaoPorTexto(magistrado)
 
+}
+
+
+async function pjeSelecionarOpcaoPorTexto(
+	texto='',
+	parcial=false
+){
+	if(!texto) return ''
+	await esperar('mat-option',true,true)
+	let opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText == texto)[0] || ''
+	if(!opcao){
+		if(parcial)
+			opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText.includes(texto))[0] || ''
 	}
+	clicar(opcao)
+	return opcao
 }
 
 
