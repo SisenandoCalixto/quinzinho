@@ -16,6 +16,7 @@ async function programa(){
 
 
 	listarPerfis()
+	await criarOrgaos()
 	console.info('INFORMACOES:',INFORMACOES)
 
 
@@ -27,14 +28,37 @@ async function obterInformacoes(){
 	return informacoes
 }
 
-function listarPerfis(){
+async function listarPerfis(){
 	let secao = selecionar('section')
 	INFORMACOES.perfis.forEach(
 		perfil => {
-			console.debug('perfil',perfil)
 			let id = perfil.idOrgaoJulgador
 			let nome = perfil.orgaoJulgador.trim()
 			criarBotao('perfil-'+id,'',secao,nome,'',()=>abrirPaginaConfiguracaoJuizo(id,nome))
 		}
 	)
+}
+
+async function criarOrgaos(){
+//	console.debug('CONFIGURACAO:',CONFIGURACAO)
+	let perfis = INFORMACOES.perfis || {}
+	let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || {}
+
+	//console.debug('juizosPorOrgao',juizosPorOrgao)
+	
+	for(let [indice,perfil] of perfis.entries()){
+		let orgao = 'orgao' + perfil.idOrgaoJulgador
+		console.debug('orgao',orgao)
+		
+		let chave = CONFIGURACAO?.juizosPorOrgao[orgao] || ''
+		console.debug('chave',chave)
+
+		if(!chave) juizosPorOrgao[orgao] = []
+		
+	}
+
+	await browser.storage.local.set({juizosPorOrgao})
+
+	console.debug('juizosPorOrgao',juizosPorOrgao)
+
 }

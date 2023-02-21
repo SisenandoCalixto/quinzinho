@@ -39,11 +39,10 @@ async function definicoesGlobais(){
 	relatar('MODO:', MODO) //CONTÉM A CONFIGURAÇÃO PARA MUDANÇA DE MODO TESTE
 
 	async function definirChavesPrimariasDoArmazenamento(){
-		if(!CONFIGURACAO?.usuario) await browser.storage.local.set({usuario:{}})
-		if(!CONFIGURACAO?.menuMovel) await browser.storage.local.set({menuMovel:{h:0,v:0}})
-		if(!CONFIGURACAO?.tabelas) await browser.storage.local.set({tabelas:{}})
 		if(!CONFIGURACAO?.janela) await browser.storage.local.set({janela:{}})
-		if(!CONFIGURACAO?.chave) await browser.storage.local.set({chave:''})
+		if(!CONFIGURACAO?.menuMovel) await browser.storage.local.set({menuMovel:{h:0,v:0}})
+		if(!CONFIGURACAO?.usuario) await browser.storage.local.set({usuario:{}})
+		if(!CONFIGURACAO?.juizosPorOrgao) await browser.storage.local.set({juizosPorOrgao:{}})
 	}
 
 }
