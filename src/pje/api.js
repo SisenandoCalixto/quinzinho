@@ -14,12 +14,28 @@ function pjeApiRequisicaoConfiguracoes(instancia='1'){
 async function pjeApiObterPerfis(){
 	let url = LINK.pje.api.seguranca + 'token/perfis'
 	relatar('Consultando API:',url)
-	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
-	let erro = pjeApiVerificarErro(resposta)
-	if(erro) throw new Error(erro)
-	let dados = await resposta.json()
-	relatar('Dados:',dados)
-	return dados || ''
+	try{
+		let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
+		let erro = pjeApiVerificarErro(resposta)
+		if(erro) throw new Error(erro)
+		let dados = await resposta.json()
+		relatar('Dados:',dados)
+		return dados || ''
+	}
+	catch(erro){
+		console.error('-> Erro: ', erro)
+		if(erro.message.includes('Unauthorized')) {
+			document.addEventListener(
+				'click',
+				() => {
+					window.location.href = JANELA
+				}
+			)
+			alert(TEXTO.autentique)
+			criarJanela(LINK.pje.raiz,'pjePainel')
+			return false
+		}
+	}
 }
 
 

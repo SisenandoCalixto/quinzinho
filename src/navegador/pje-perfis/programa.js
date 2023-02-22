@@ -30,6 +30,9 @@ async function obterInformacoes(){
 
 async function listarPerfis(){
 	let secao = selecionar('section')
+
+	console.debug('INFORMACOES.perfis',INFORMACOES.perfis)
+	
 	INFORMACOES.perfis.forEach(
 		perfil => {
 			let id = perfil.idOrgaoJulgador
