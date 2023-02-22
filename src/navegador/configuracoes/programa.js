@@ -15,7 +15,8 @@ async function configuracoes(){
 	obterConfiguracoesDaExtensao()
 	exportarConfiguracoesDaExtensao()
 	importarConfiguracoesDaExtensao()
-
+	aoInstalar()
+	
 	selecionar('#salvar').addEventListener(
 		'click',
 		evento => {
@@ -32,7 +33,13 @@ async function configuracoes(){
 		}
 	)
 
+	function aoInstalar(){
+		if(!instalacao) return
+		let dados = selecionar('#exportacao-importacao')
+		if(dados) dados.style.display = 'none'	
+	}
 }
+
 
 function exportarConfiguracoesDaExtensao(){
 	let campoTexto = selecionar('.exportar')

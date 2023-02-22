@@ -17,7 +17,7 @@ browser.storage.local.get(
 
 			definicoesGlobais()
 
-			if(!CONFIGURACAO?.usuario?.email) abrirPaginaConfiguracaoDoTribunal()
+			if(!CONFIGURACAO?.usuario?.instancia) abrirPaginaConfiguracaoDoUsuario()
 
 			definirIconeDaExtensaoPeloEstado(EXTENSAO.ativada)
 

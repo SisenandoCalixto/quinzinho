@@ -139,13 +139,13 @@ function abrirPaginaTermosDeUso(){
 }
 
 
-function abrirPaginaConfiguracaoDoTribunal(){
+function abrirPaginaConfiguracaoDoUsuario(){
 
 	criarJanela(
 		caminho('navegador/configuracoes/pagina.htm?instalacao=1'),
 		'',
 		700,
-		500,
+		400,
 		0,
 		0,
 		'detached_panel'
@@ -249,9 +249,8 @@ function obterConfiguracoesDaExtensao(){
 
 			configuracoes.querySelectorAll('input,select,textarea').forEach(
 				configuracao => {
-
 					let chave = configuracao.className
-					if(!chave) return
+					if(!chave || chave.includes('exportar') || chave.includes('importar')) return
 					let dados = CONFIGURACAO[destino]
 					let dado = dados[chave]
 					let tag = configuracao.tagName
@@ -264,7 +263,6 @@ function obterConfiguracoesDaExtensao(){
 					if(tipo === 'number') configuracao.value = dado || valor || 0
 					if(tipo === 'text') configuracao.value = dado || valor || ''
 					if(chave === 'fase') configuracao.value = dado || valor || 'TODAS'
-
 				}
 			)
 		}
@@ -289,9 +287,8 @@ function salvarConfiguracoesDaExtensao(){
 
 				configuracoes.querySelectorAll('input,select,textarea').forEach(
 					configuracao => {
-
 						let chave = configuracao.className || ''
-						if(!chave) return
+						if(!chave || chave.includes('exportar') || chave.includes('importar')) return
 						let tag = configuracao.tagName
 						let tipo = configuracao.type
 						let valor = configuracao.value

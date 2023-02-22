@@ -53,7 +53,6 @@ main{
 	background-size:250px;
 	background-position:calc(50% - 9px);
 	display:block;
-	overflow:auto;
 	width:100%;
 }
 

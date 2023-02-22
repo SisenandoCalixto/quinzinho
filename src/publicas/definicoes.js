@@ -239,6 +239,7 @@ function definirLinks(){
 function definirTextos(){
 	let texto = {}
 	texto.autentique = 'Autentique-se no PJe para poder executar esta funcionalidade.'
+	texto.permissoes = 'Verifique se o sistema está online e se as permissões de acesso a URLs foram concedidas.'
 	return texto
 }
 

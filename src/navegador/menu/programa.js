@@ -8,7 +8,7 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 	CONFIGURACAO = armazenamento
 	EXTENSAO.ativada = CONFIGURACAO.ativada
 
-	if(!CONFIGURACAO?.usuario?.email) abrirPaginaConfiguracaoDoTribunal()
+	if(!CONFIGURACAO?.usuario?.instancia) abrirPaginaConfiguracaoDoUsuario()
 
 	definicoesGlobais()
 

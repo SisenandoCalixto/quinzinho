@@ -24,7 +24,7 @@ async function programa(){
 
 async function obterInformacoes(){
 	let informacoes = {}
-	informacoes.perfis = await pjeApiObterPerfis()
+	informacoes.perfis = await pjeApiObterPerfis() || []
 	return informacoes
 }
 

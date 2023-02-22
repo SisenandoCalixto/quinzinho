@@ -1,4 +1,5 @@
-function pjeApiRequisicaoConfiguracoes(instancia='1'){
+function pjeApiRequisicaoConfiguracoes(){
+	let instancia = CONFIGURACAO?.usuario?.instancia || '1'
 	return {
 		"method": "GET",
 		"mode": "cors",
@@ -24,7 +25,7 @@ async function pjeApiObterPerfis(){
 	}
 	catch(erro){
 		console.error('-> Erro: ', erro)
-		if(erro.message.includes('Unauthorized')) {
+		if(erro.message.includes('Unauthorized')){
 			document.addEventListener(
 				'click',
 				() => {
@@ -33,8 +34,18 @@ async function pjeApiObterPerfis(){
 			)
 			alert(TEXTO.autentique)
 			criarJanela(LINK.pje.raiz,'pjePainel')
-			return false
 		}
+		if(erro.message.includes('NetworkError when attempting to fetch resource')){
+			document.addEventListener(
+				'click',
+				() => {
+					window.location.href = JANELA
+				}
+			)
+			alert(TEXTO.permissoes)
+			browser.runtime.openOptionsPage()
+		}
+		return false
 	}
 }
 
