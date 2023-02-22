@@ -239,7 +239,6 @@ function definirLinks(){
 function definirTextos(){
 	let texto = {}
 	texto.autentique = 'Autentique-se no PJe para poder executar esta funcionalidade.'
-	texto.exclusiva = 'Funcionalidade exclusiva para alunos!'
 	return texto
 }
 
