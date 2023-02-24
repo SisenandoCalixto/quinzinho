@@ -81,7 +81,7 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 			() => criarJanela(LINK.pje.consulta.advogado)
 		)
 
-		secao = selecionar('#links-uteis')
+		secao = selecionar('#institucionais')
 
 		criarBotaoDoMenu(
 			'trt',
@@ -97,11 +97,6 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 			'cnc',
 			'Consolidação das Normas da Corregedoria',
 			() => criarJanela(LINK.tribunal.cnc)
-		)
-		criarBotaoDoMenu(
-			'egestao',
-			'E-Gestão',
-			() => criarJanela(LINK.egestao)
 		)
 		criarBotaoDoMenu(
 			'mail',
@@ -138,6 +133,24 @@ async function criarMenuDaBarraDeFerramentasDoNavegador(){
 			'intranet',
 			'Intranet',
 			() => criarJanela(LINK.pje.intranet)
+		)
+
+		secao = selecionar('#relatorios')
+
+		criarBotaoDoMenu(
+			'sig',
+			'SIG - Sistema Integrado de Gerenciamento',
+			() => criarJanela(LINK.tribunal.sig)
+		)
+		criarBotaoDoMenu(
+			'egestao',
+			'E-Gestão',
+			() => criarJanela(LINK.egestao)
+		)
+		criarBotaoDoMenu(
+			'esincor',
+			'E-SinCor',
+			() => criarJanela(LINK.eSincor)
 		)
 
 		secao = selecionar('#definicoes')

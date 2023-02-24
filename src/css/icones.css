@@ -1,35 +1,37 @@
 :root{
 
-	--quinzinho-icone-ativo:						url(/imagens/icones/extensao/ativo.svg);
+	--quinzinho-icone-ativo:					url(/imagens/icones/extensao/ativo.svg);
 	--quinzinho-icone-branco:					url(/imagens/icones/extensao/branco.svg);
-	--quinzinho-icone-inativo:					url(/imagens/icones/extensao/inativo.svg);
+	--quinzinho-icone-inativo:				url(/imagens/icones/extensao/inativo.svg);
 	--quinzinho-icone-advogado:				url(/imagens/icones/advogado.svg);
 	--quinzinho-icone-agenda:					url(/imagens/icones/agenda.svg);
-	--quinzinho-icone-apontador:				url(/imagens/icones/apontador.svg);
+	--quinzinho-icone-apontador:			url(/imagens/icones/apontador.svg);
 	--quinzinho-icone-arroba:					url(/imagens/icones/arroba.svg);
-	--quinzinho-icone-audiencia:				url(/imagens/icones/audiencia.svg);
-	--quinzinho-icone-cnc:							url(/imagens/icones/cnc.svg);
+	--quinzinho-icone-audiencia:			url(/imagens/icones/audiencia.svg);
+	--quinzinho-icone-cnc:						url(/imagens/icones/cnc.svg);
 	--quinzinho-icone-codigo:					url(/imagens/icones/codigo.svg);
 	--quinzinho-icone-correios:				url(/imagens/icones/correios.svg);
-	--quinzinho-icone-egestao:					url(/imagens/icones/egestao.svg);
+	--quinzinho-icone-egestao:				url(/imagens/icones/egestao.svg);
+	--quinzinho-icone-esincor:				url(/imagens/icones/esincor.svg);
 	--quinzinho-icone-engrenagem:			url(/imagens/icones/engrenagem.svg);
-	--quinzinho-icone-exe15:						url(/imagens/icones/exe15.svg);
+	--quinzinho-icone-exe15:					url(/imagens/icones/exe15.svg);
 	--quinzinho-icone-gigs:						url(/imagens/icones/gigs.svg);
 	--quinzinho-icone-github:					url(/imagens/icones/github.svg);
-	--quinzinho-icone-i:								url(/imagens/icones/i.svg);
+	--quinzinho-icone-i:							url(/imagens/icones/i.svg);
 	--quinzinho-icone-intranet:				url(/imagens/icones/intranet.svg);
 	--quinzinho-icone-lupa:						url(/imagens/icones/lupa.svg);
 	--quinzinho-icone-adicao:					url(/imagens/icones/operador-adicao.svg);
-	--quinzinho-icone-divisao:					url(/imagens/icones/operador-divisao.svg);
-	--quinzinho-icone-multiplicacao:		url(/imagens/icones/operador-multiplicacao.svg);
-	--quinzinho-icone-subtracao:				url(/imagens/icones/operador-subtracao.svg);
-	--quinzinho-icone-martelo:					url(/imagens/icones/martelo.svg);
+	--quinzinho-icone-divisao:				url(/imagens/icones/operador-divisao.svg);
+	--quinzinho-icone-multiplicacao:	url(/imagens/icones/operador-multiplicacao.svg);
+	--quinzinho-icone-subtracao:			url(/imagens/icones/operador-subtracao.svg);
+	--quinzinho-icone-martelo:				url(/imagens/icones/martelo.svg);
 	--quinzinho-icone-painel:					url(/imagens/icones/painel.svg);
 	--quinzinho-icone-pericias:				url(/imagens/icones/pericias.svg);
-	--quinzinho-icone-pje:							url(/imagens/icones/pje.svg);
+	--quinzinho-icone-pje:						url(/imagens/icones/pje.svg);
 	--quinzinho-icone-seta:						url(/imagens/icones/seta.svg);
+	--quinzinho-icone-sig:						url(/imagens/icones/sig.svg);
 	--quinzinho-icone-termos:					url(/imagens/icones/termos.svg);
-	--quinzinho-icone-trt:							url(/imagens/icones/trt.svg);
+	--quinzinho-icone-trt:						url(/imagens/icones/trt.svg);
 	--quinzinho-icone-wikivt:					url(/imagens/icones/wikivt.svg);
 
 }
@@ -39,6 +41,14 @@ botao.trt{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-trt) no-repeat center / 65% 65%,
+		rgba(var(--quinzinho-cor-branco),1)
+	;
+}
+
+botao.sig{
+	background:
+		var(--quinzinho-gradiente-branco-preto),
+		var(--quinzinho-icone-sig) no-repeat center / 65% 65%,
 		rgba(var(--quinzinho-cor-branco),1)
 	;
 }
@@ -241,6 +251,21 @@ botao.cnc{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-cnc) no-repeat center / 70% 70%,
+		var(--quinzinho-cor-clarear),
+		var(--quinzinho-cor-clarear),
+		var(--quinzinho-cor-clarear),
+		var(--quinzinho-cor-clarear),
+		var(--quinzinho-cor-clarear),
+		var(--quinzinho-cor-clarear),
+		var(--quinzinho-cor-clarear),
+		rgba(var(--quinzinho-cor-amarelo),1)
+	;
+}
+
+botao.esincor{
+	background:
+		var(--quinzinho-gradiente-branco-preto),
+		var(--quinzinho-icone-esincor) no-repeat center / 70% 70%,
 		var(--quinzinho-cor-clarear),
 		var(--quinzinho-cor-clarear),
 		var(--quinzinho-cor-clarear),
