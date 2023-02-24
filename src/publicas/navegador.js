@@ -189,6 +189,8 @@ function abrirPaginaConfiguracaoJuizo(
 
 function definirIconeDaExtensaoPeloEstado(ativada){
 
+	let navegador = browser.browserAction
+
 	if(
 		ativada != true
 		&&
@@ -198,10 +200,8 @@ function definirIconeDaExtensaoPeloEstado(ativada){
 		browser.storage.local.set({ativada:ativada})
 	}
 
-	if(ativada)
-		browser.action.setIcon({path:'/imagens/icones/extensao/ativo.svg'})
-	else
-		browser.action.setIcon({path:'/imagens/icones/extensao/inativo.svg'})
+	if(ativada) navegador.setIcon({path:'/imagens/icones/extensao/ativo.svg'})
+	else navegador.setIcon({path:'/imagens/icones/extensao/inativo.svg'})
 
 }
 

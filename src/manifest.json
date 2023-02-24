@@ -2,11 +2,11 @@
 	"name":							"Quinzinho - Assistente Virtual do TRT-15",
 	"short_name":				"Quinzinho",
 	"description":			"Esta extensão se destina a oferecer ferramentas de gestão de processos e otimização de trabalhos no âmbito do Tribunal Regional do Trabalho da 15ª Região.",
-	"manifest_version":	3,
+	"manifest_version":	2,
 	"version":					"0.1",
 	"author":						"Sisenando Gomes Calixto de Sousa",
 
-	"browser_specific_settings":{
+	"applications":{
 		"gecko":{
 			"id":						"{08bcc6f9-6e67-47b0-85d7-cac3c3179a46}"
 		}
@@ -64,6 +64,7 @@
 	],
 
 	"permissions":[
+		"<all_urls>",
 		"activeTab",
 		"clipboardRead",
 		"clipboardWrite",
@@ -74,16 +75,12 @@
 		"unlimitedStorage"
 	],
 
-	"host_permissions":[
-		"<all_urls>"
-	],
-
 	"options_ui":{
 		"page": "navegador/configuracoes/pagina.htm",
 		"open_in_tab": false
 	},
 
-	"action":{
+	"browser_action":{
 		"browser_style":	true,
 		"default_popup": 	"navegador/menu/pagina.htm"
 	}
