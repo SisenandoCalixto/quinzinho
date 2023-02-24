@@ -3,10 +3,10 @@
 	"short_name":				"Quinzinho",
 	"description":			"Esta extensão se destina a oferecer ferramentas de gestão de processos e otimização de trabalhos no âmbito do Tribunal Regional do Trabalho da 15ª Região.",
 	"manifest_version":	2,
-	"version":					"0.1",
+	"version":					"0.2",
 	"author":						"Sisenando Gomes Calixto de Sousa",
 
-	"applications":{
+	"browser_specific_settings":{
 		"gecko":{
 			"id":						"{08bcc6f9-6e67-47b0-85d7-cac3c3179a46}"
 		}
