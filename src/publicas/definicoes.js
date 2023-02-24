@@ -130,6 +130,7 @@ function definirLinks(){
 	link.egestao = 'https://novoegestao.tst.jus.br/'
 	link.extensao = obterLinkExtensao()
 	link.eCarta = obterLinkEcarta()
+	link.eSincor = 'http://10.15.214.220/jasperserver'
 	link.github = 'https://github.com/SisenandoCalixto/quinzinho/'
 	link.google = obterLinkGoogle()
 	link.pje = obterLinkPje()
@@ -153,10 +154,11 @@ function definirLinks(){
 		url.intranet = montarUrl(url,'satelites','aplicacoesExtranet')
 		url.portal = montarUrl(url)
 		url.proad = montarUrl(url,'proad')
+		url.sig = montarUrl(url,'sig')
 		url.raiz = montarUrl(url)
 		return url
 	}
-
+	
 	function obterLinkGoogle(){
 		let usuario = CONFIGURACAO?.usuario?.email || '0'
 		let url = {}
