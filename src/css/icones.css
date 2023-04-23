@@ -1,5 +1,4 @@
 :root{
-
 	--quinzinho-icone-ativo:					url(/imagens/icones/extensao/ativo.svg);
 	--quinzinho-icone-branco:					url(/imagens/icones/extensao/branco.svg);
 	--quinzinho-icone-inativo:				url(/imagens/icones/extensao/inativo.svg);
@@ -9,6 +8,7 @@
 	--quinzinho-icone-arroba:					url(/imagens/icones/arroba.svg);
 	--quinzinho-icone-audiencia:			url(/imagens/icones/audiencia.svg);
 	--quinzinho-icone-cnc:						url(/imagens/icones/cnc.svg);
+	--quinzinho-icone-cnj:						url(/imagens/icones/cnj.svg);
 	--quinzinho-icone-codigo:					url(/imagens/icones/codigo.svg);
 	--quinzinho-icone-correios:				url(/imagens/icones/correios.svg);
 	--quinzinho-icone-egestao:				url(/imagens/icones/egestao.svg);
@@ -33,9 +33,7 @@
 	--quinzinho-icone-termos:					url(/imagens/icones/termos.svg);
 	--quinzinho-icone-trt:						url(/imagens/icones/trt.svg);
 	--quinzinho-icone-wikivt:					url(/imagens/icones/wikivt.svg);
-
 }
-
 
 botao.trt{
 	background:
@@ -52,7 +50,6 @@ botao.sig{
 		rgba(var(--quinzinho-cor-branco),1)
 	;
 }
-
 
 botao.egestao{
 	background:
@@ -106,6 +103,14 @@ botao.pje-instancia-2{
 		var(--quinzinho-icone-pje) no-repeat center / 70% 70%,
     var(--quinzinho-cor-clarear),
 		rgba(var(--quinzinho-cor-preto),1)
+	;
+}
+
+botao.cnj{
+	background:
+		var(--quinzinho-gradiente-branco-preto),
+		var(--quinzinho-icone-cnj) no-repeat center / 70% 70%,
+		rgba(var(--quinzinho-cor-vermelho),1)
 	;
 }
 

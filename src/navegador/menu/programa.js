@@ -152,6 +152,11 @@ async function programa(){
 			'E-SinCor',
 			() => criarJanela(LINK.eSincor)
 		)
+		criarBotaoDoMenu(
+			'cnj',
+			'CNJ - Estatísticas do Poder Judiciário',
+			() => criarJanela('https://painel-estatistica.stg.cloud.cnj.jus.br/estatisticas.html')
+		)
 
 		secao = selecionar('#definicoes')
 		
