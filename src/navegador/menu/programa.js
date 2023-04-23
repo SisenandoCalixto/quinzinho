@@ -1,6 +1,6 @@
-window.addEventListener('load',criarMenuDaBarraDeFerramentasDoNavegador)
+window.addEventListener('load',programa)
 
-async function criarMenuDaBarraDeFerramentasDoNavegador(){
+async function programa(){
 
 	let armazenamento = await browser.storage.local.get()
 	let secao = '' 
