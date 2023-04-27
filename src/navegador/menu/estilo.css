@@ -68,7 +68,7 @@ label{
 	opacity:0.8;
 }
 
-botao{
+quinzinho-botao{
 	color:rgba(var(--quinzinho-cor-branco),1);
 	font-size:12px;
 	padding:18px 0;

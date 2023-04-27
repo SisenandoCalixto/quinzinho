@@ -35,7 +35,7 @@
 	--quinzinho-icone-wikivt:					url(/imagens/icones/wikivt.svg);
 }
 
-botao.trt{
+quinzinho-botao.trt{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-trt) no-repeat center / 65% 65%,
@@ -43,7 +43,7 @@ botao.trt{
 	;
 }
 
-botao.sig{
+quinzinho-botao.sig{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-sig) no-repeat center / 65% 65%,
@@ -51,7 +51,7 @@ botao.sig{
 	;
 }
 
-botao.egestao{
+quinzinho-botao.egestao{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-egestao) no-repeat center / 70% 70%,
@@ -60,7 +60,7 @@ botao.egestao{
 	;
 }
 
-botao.configuracao-magistrado{
+quinzinho-botao.configuracao-magistrado{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-apontador) no-repeat 5px 5px / 45% 45%,
@@ -71,7 +71,7 @@ botao.configuracao-magistrado{
 	;
 }
 
-botao.audiencias{
+quinzinho-botao.audiencias{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-audiencia) no-repeat center / 70% 70%,
@@ -79,7 +79,7 @@ botao.audiencias{
 	;
 }
 
-botao.designacoes{
+quinzinho-botao.designacoes{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-audiencia) no-repeat center / 70% 70%,
@@ -89,7 +89,7 @@ botao.designacoes{
 	;
 }
 
-botao.pje-instancia-1{
+quinzinho-botao.pje-instancia-1{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-pje) no-repeat center / 70% 70%,
@@ -97,7 +97,7 @@ botao.pje-instancia-1{
 	;
 }
 
-botao.pje-instancia-2{
+quinzinho-botao.pje-instancia-2{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-pje) no-repeat center / 70% 70%,
@@ -106,7 +106,7 @@ botao.pje-instancia-2{
 	;
 }
 
-botao.cnj{
+quinzinho-botao.cnj{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-cnj) no-repeat center / 70% 70%,
@@ -114,7 +114,7 @@ botao.cnj{
 	;
 }
 
-botao.pje1{
+quinzinho-botao.pje1{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-pje) no-repeat center / 70% 70%,
@@ -129,7 +129,7 @@ botao.pje1{
 	;
 }
 
-botao.pje-painel-global{
+quinzinho-botao.pje-painel-global{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-painel) no-repeat center / 70% 70%,
@@ -138,7 +138,7 @@ botao.pje-painel-global{
 	;
 }
 
-botao.gigs{
+quinzinho-botao.gigs{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-gigs) no-repeat center / 70% 70%,
@@ -146,7 +146,7 @@ botao.gigs{
 	;
 }
 
-botao.mail{
+quinzinho-botao.mail{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-arroba) no-repeat center / 70% 70%,
@@ -154,7 +154,7 @@ botao.mail{
 	;
 }
 
-botao.exe15{
+quinzinho-botao.exe15{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-exe15) no-repeat center / 70% 70%,
@@ -162,7 +162,7 @@ botao.exe15{
 	;
 }
 
-botao.pericias{
+quinzinho-botao.pericias{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-pericias) no-repeat center / 70% 70%,
@@ -171,7 +171,7 @@ botao.pericias{
 	;
 }
 
-botao.correios{
+quinzinho-botao.correios{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-correios) no-repeat center / 70% 70%,
@@ -180,7 +180,7 @@ botao.correios{
 	;
 }
 
-botao.pje-consulta-processos{
+quinzinho-botao.pje-consulta-processos{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-lupa) no-repeat center / 70% 70%,
@@ -188,7 +188,7 @@ botao.pje-consulta-processos{
 	;
 }
 
-botao.pje-consulta-pessoa{
+quinzinho-botao.pje-consulta-pessoa{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-agenda) no-repeat center / 70% 70%,
@@ -196,7 +196,7 @@ botao.pje-consulta-pessoa{
 	;
 }
 
-botao.intranet{
+quinzinho-botao.intranet{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-intranet) no-repeat center / 70% 70%,
@@ -204,7 +204,7 @@ botao.intranet{
 	;
 }
 
-botao.pje-consulta-advogado{
+quinzinho-botao.pje-consulta-advogado{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-advogado) no-repeat center / 70% 70%,
@@ -214,7 +214,7 @@ botao.pje-consulta-advogado{
 	;
 }
 
-botao.pje-modelos-de-documentos{
+quinzinho-botao.pje-modelos-de-documentos{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-codigo) no-repeat center / 70% 70%,
@@ -224,7 +224,7 @@ botao.pje-modelos-de-documentos{
 	;
 }
 
-botao.wikivt{
+quinzinho-botao.wikivt{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-wikivt) no-repeat center / 70% 70%,
@@ -233,14 +233,14 @@ botao.wikivt{
 	;
 }
 
-botao.proad{
+quinzinho-botao.proad{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		rgba(var(--quinzinho-cor-azul),1)
 	;
 }
 
-botao.pje-calc{
+quinzinho-botao.pje-calc{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-pje) no-repeat center / 50% 50%,
@@ -252,7 +252,7 @@ botao.pje-calc{
 	;
 }
 
-botao.cnc{
+quinzinho-botao.cnc{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-cnc) no-repeat center / 70% 70%,
@@ -267,7 +267,7 @@ botao.cnc{
 	;
 }
 
-botao.esincor{
+quinzinho-botao.esincor{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		var(--quinzinho-icone-esincor) no-repeat center / 70% 70%,

@@ -329,7 +329,7 @@ function criarBotao(
 	estilo = ''
 ){
 
-	let elemento = criar('botao',id,classe,ancestral)
+	let elemento = criar('quinzinho-botao',id,classe,ancestral)
 
 	if(texto) elemento.innerText = texto
 	if(!titulo) titulo = texto

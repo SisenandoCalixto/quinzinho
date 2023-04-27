@@ -52,21 +52,11 @@ header
 	z-index:3 !important;
 }
 
-#importar,
-#salvar
-{
+#salvar{
 	border-radius:10px;
 	box-shadow:0 2px 4px 2px rgba(var(--quinzinho-cor-preto),0.5);
-	padding:1rem;
-}
-
-#salvar{
-	box-shadow:0 2px 4px 2px rgba(var(--quinzinho-cor-preto),0.5);
 	left:calc(50vw - 50px);
+	padding:1rem;
 	width:100px;
 	z-index:4 !important;
-}
-
-#importar{
-	margin:1rem auto;
 }

@@ -36,7 +36,7 @@ main h2{
 	z-index:1000;
 }
 
-main section botao{
+main section quinzinho-botao{
 	background:
 		var(--quinzinho-gradiente-branco-preto),
 		rgba(var(--quinzinho-cor-branco),1)

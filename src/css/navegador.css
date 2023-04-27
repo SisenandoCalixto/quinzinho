@@ -222,18 +222,18 @@ textarea{
 	background:rgba(var(--quinzinho-cor-branco),0.8);
 }
 
-botao:hover{
+quinzinho-botao:hover{
 	opacity:1;
 }
 
-botao,
-botao:active
+quinzinho-botao,
+quinzinho-botao:active
 {
 	cursor:pointer;
 	opacity:0.8;
 }
 
-botao{
+quinzinho-botao{
 	display:block;
 	height:30px;
 	margin:0 10px;
@@ -241,20 +241,13 @@ botao{
 	width:30px;
 }
 
-botao.dimensoes{
+quinzinho-botao.dimensoes{
 	position:fixed;
 	right:5px;
 	top:5px;
 	z-index:10;
 }
 
-botao.dimensoes.encolher-crescer{
+quinzinho-botao.dimensoes.encolher-crescer{
 	animation:encolher-crescer 1s ease-in;
-}
-
-botao.imprimir{
-	position:fixed;
-	right:50px;
-	top:5px;
-	z-index:10;
 }

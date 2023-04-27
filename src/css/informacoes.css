@@ -1,4 +1,4 @@
-botao.informacoes:hover::before{
+quinzinho-botao.informacoes:hover::before{
 	animation:aparecer 0.3s ease-out 0s 1 both;
 	background:
 		var(--quinzinho-gradiente-branco-preto),
