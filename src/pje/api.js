@@ -70,9 +70,11 @@ async function pjeApiObterProcessoRedistribuicoes(id){
 	let dados = await resposta.json()
 	if(vazio(dados)) return ''
 	relatar('Dados:',dados)
+	dados = dados.sort((a, b) => {
+    return (a.dataHoraRedistribuicao - b.dataHoraRedistribuicao)
+	})
 	return dados
 }
-
 
 async function pjeApiObterOrgaosJulgadores(id=''){
 	let url = LINK.pje.api.comum + 'orgaosjulgadores/' + id

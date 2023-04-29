@@ -172,7 +172,8 @@ function criar(
 	classe = '',
 	ancestral = false,
 	antesDe = false,
-	texto = ''
+	texto = '',
+	titulo = ''
 ){
 
 	remover(id)
@@ -185,6 +186,7 @@ function criar(
 	if(id) elemento.id = id
 	if(classe) elemento.className = classe
 	if(texto) elemento.innerText = texto
+	if(titulo) elemento.title = titulo
 
 	relatar('Elemento criado:',elemento)
 

@@ -3,7 +3,7 @@
 	"short_name":				"Quinzinho",
 	"description":			"Esta extensão se destina a oferecer ferramentas de gestão de processos e otimização de trabalhos no âmbito do Tribunal Regional do Trabalho da 15ª Região.",
 	"manifest_version":	2,
-	"version":					"0.7",
+	"version":					"0.8",
 	"author":						"Sisenando Gomes Calixto de Sousa",
 
 	"browser_specific_settings":{
@@ -44,7 +44,8 @@
 				"css/animacoes.css",
 				"css/cores.css",
 				"css/icones.css",
-				"css/informacoes.css"
+				"css/informacoes.css",
+				"css/quinzinho.css"
 			],
 			"js":[
 				"publicas/definicoes.js",
@@ -52,6 +53,7 @@
 				"publicas/dom.js",
 				"publicas/gerais.js",
 				"publicas/navegador.js",
+				"publicas/quinzinho.js",
 				"publicas/trt15.js",
 				"iniciar.js",
 				"ad-hoc.js",

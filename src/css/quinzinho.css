@@ -1,0 +1,40 @@
+quinzinho{
+	animation:aparecer 0.3s ease-out 0s 1 both;
+	background:
+		var(--quinzinho-gradiente-preto-branco),
+		rgba(var(--quinzinho-cor-primaria),0.95)
+	;
+	border:rgba(var(--quinzinho-cor-preto),0.3) solid 3px;
+	border-radius:15px 15px 0 15px;
+	color:rgba(var(--quinzinho-cor-branco),1);
+	content:attr(aria-label);
+	cursor:pointer;
+	display:block;
+	font-size:14px;
+	font-weight:600;
+	line-height:18px;
+	margin:0 auto;
+	padding:5px;
+	position:relative;
+	text-align:center;
+	white-space:pre-line;
+	width:calc(50% - 70px);
+	z-index:99;
+}
+
+quinzinho::before{
+	animation:aparecer 0.3s ease-out 0s 1 both;
+	background:var(--quinzinho-icone-inativo) no-repeat 5px center / 80px;
+	border-radius:0;
+	content:"";
+	display:block;
+	height:80px;
+	left:calc(100% - 10px);
+	padding:5px 5px 5px 35px;
+	position:absolute;
+	text-align:center;
+	top:100%;
+	white-space:pre-line;
+	width:80px;
+	z-index:99;
+}
