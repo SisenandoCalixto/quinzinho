@@ -52,6 +52,7 @@
 				"publicas/dom.js",
 				"publicas/gerais.js",
 				"publicas/navegador.js",
+				"publicas/trt15.js",
 				"iniciar.js",
 				"ad-hoc.js",
 				"pje/api.js",

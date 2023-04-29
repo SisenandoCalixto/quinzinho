@@ -61,7 +61,7 @@ async function pjeApiObterProcessoDadosPrimarios(id){
 	return dados
 }
 
-async function pjeApiObterOrgaoJulgador(id){
+async function pjeApiObterOrgaosJulgadores(id=''){
 	let url = LINK.pje.api.comum + 'orgaosjulgadores/' + id
 	relatar('Consultando API:',url)
 	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
