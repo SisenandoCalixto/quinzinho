@@ -14,9 +14,8 @@ async function pje(){
 	let id = pjeObterProcessoId()
 	PROCESSO = await new Processo(id)
 
-	console.info('PROCESSO',PROCESSO)
-	console.info('INFORMACOES:',INFORMACOES)
 	console.info('VARAS:',VARAS)
+	console.info('PROCESSO',PROCESSO)
 
 	pjeOtimizarConclusaoAMagistrado()
 
@@ -143,6 +142,7 @@ class Processo {
   async processo(id){
     let processo = await pjeApiObterProcessoDadosPrimarios(id)
 		Object.assign(processo,obterDadosDoNumeroDoProcesso(processo.numero))
+		processo.redistribuicoes = await pjeApiObterProcessoRedistribuicoes(id)
     return processo 
   }
 }

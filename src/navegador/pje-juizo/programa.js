@@ -7,9 +7,9 @@ async function magistrados(){
 	CONFIGURACAO = armazenamento
 
 	let configuracoes = document.querySelectorAll('.configuracao')
-	let id = obterUrlParametro('id')
-	let nome = obterUrlParametro('nome') + ' (' + id + ')'
-	let orgao = 'orgao' + id
+	let vara = obterUrlParametro('vara')
+	let nome = obterUrlParametro('nome') + ' (' + vara + ')'
+	let orgao = 'orgao' + vara
 
 	definicoesGlobais()
 	criarCabecalhoDePaginaDaExtensao()

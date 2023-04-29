@@ -61,6 +61,19 @@ async function pjeApiObterProcessoDadosPrimarios(id){
 	return dados
 }
 
+async function pjeApiObterProcessoRedistribuicoes(id){
+	let url = LINK.pje.api.comum + 'processos/redistribuicao?idProcesso=' + id
+	relatar('Consultando API:',url)
+	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
+	let erro = pjeApiVerificarErro(resposta)
+	if(erro) throw new Error(erro)
+	let dados = await resposta.json()
+	if(vazio(dados)) return ''
+	relatar('Dados:',dados)
+	return dados
+}
+
+
 async function pjeApiObterOrgaosJulgadores(id=''){
 	let url = LINK.pje.api.comum + 'orgaosjulgadores/' + id
 	relatar('Consultando API:',url)
