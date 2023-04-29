@@ -14,8 +14,8 @@ async function pje(){
 	let id = pjeObterProcessoId()
 	PROCESSO = await new Processo(id)
 
+	console.info('VARAS:',VARAS)
 	console.info('PROCESSO',PROCESSO)
-	console.info('INFORMACOES:',INFORMACOES)
 
 	pjeOtimizarConclusaoAMagistrado()
 
@@ -69,17 +69,17 @@ async function pjeOtimizarConclusaoAMagistrado(){
 	await esperar('pje-concluso-tarefa-botao',true,true)
 
 	let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || ''
-	let orgaoJulgador = PROCESSO?.orgaoJulgador?.id || ''
+	let orgaoJulgador = PROCESSO?.origem || ''
 	let orgao = 'orgao' + orgaoJulgador
 	let magistrados = juizosPorOrgao[orgao] || []
 	let magistrado = magistrados[PROCESSO.final] || ''
 
-	/*
 	console.info('juizosPorOrgao',juizosPorOrgao)
 	console.info('orgaoJulgador',orgaoJulgador)
 	console.info('orgao',orgao)
 	console.info('magistrados',magistrados)
 	console.info('magistrado',magistrado)
+	/*
 	*/	
 
 	if(!magistrado) return
@@ -107,6 +107,33 @@ async function pjeSelecionarOpcaoPorTexto(
 	return opcao
 }
 
+async function obterOrgaosJulgadores(){
+
+	let orgaosJulgadores = await pjeApiObterOrgaosJulgadores()
+	console.debug('orgaosJulgadores',orgaosJulgadores)
+	
+	let orgaos = []
+
+	for(let [indice, item] of [...orgaosJulgadores].entries()){
+		let id = item?.id || ''
+		if(!id) continue
+		let orgaoJulgador = await pjeApiObterOrgaosJulgadores(id)
+		let orgao = {}
+		let tipo = orgaoJulgador?.codigoTipo || ''
+		if(tipo.includes('VARA')){
+			orgao.id = orgaoJulgador?.id || ''
+			orgao.descricao = limparEspacamentos(orgaoJulgador.descricao) || ''
+			orgao.sigla = limparEspacamentos(orgaoJulgador.sigla) || ''
+			orgao.unidade = limparEspacamentos(preencherTextoPeloInicio(numeros(orgaoJulgador.sigla),4))
+			orgaos.push(orgao)
+		}
+	}
+	orgaos = orgaos.sort((a, b) => {
+    return (a.id - b.id)
+	})
+	console.debug('orgaos',orgaos)
+
+}
 
 class Processo {
   constructor(id){
@@ -115,6 +142,7 @@ class Processo {
   async processo(id){
     let processo = await pjeApiObterProcessoDadosPrimarios(id)
 		Object.assign(processo,obterDadosDoNumeroDoProcesso(processo.numero))
+		processo.redistribuicoes = await pjeApiObterProcessoRedistribuicoes(id)
     return processo 
   }
 }

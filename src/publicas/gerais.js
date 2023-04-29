@@ -310,6 +310,14 @@ function converterNumeroDoProcessoSemSeparadoresParaPadraoCNJ(numero){
 	return numero || ''
 }
 
+function preencherTextoPeloInicio(
+	texto = '0',
+	comprimento = 1,
+	caractere = '0'
+){
+	return texto.toString().padStart(comprimento,caractere)
+}
+
 function obterNumeroDoProcessoParcial(texto){
 	let numero = texto.match(EXPRESSAO.processoNumeroParcial) || ''
 	if(!numero) return ''

@@ -170,12 +170,12 @@ function abrirPaginaConfiguracoesJuizo(){
 
 
 function abrirPaginaConfiguracaoJuizo(
-	id='',
+	vara='',
 	nome=''
 ){
 
 	criarJanela(
-		caminho('navegador/pje-juizo/pagina.htm?id='+id+'&nome='+nome),
+		caminho('navegador/pje-juizo/pagina.htm?vara='+vara+'&nome='+nome),
 		'',
 		750,
 		750,
