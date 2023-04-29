@@ -69,17 +69,17 @@ async function pjeOtimizarConclusaoAMagistrado(){
 	await esperar('pje-concluso-tarefa-botao',true,true)
 
 	let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || ''
-	let orgaoJulgador = PROCESSO?.orgaoJulgador?.id || ''
+	let orgaoJulgador = PROCESSO?.origem || ''
 	let orgao = 'orgao' + orgaoJulgador
 	let magistrados = juizosPorOrgao[orgao] || []
 	let magistrado = magistrados[PROCESSO.final] || ''
 
-	/*
 	console.info('juizosPorOrgao',juizosPorOrgao)
 	console.info('orgaoJulgador',orgaoJulgador)
 	console.info('orgao',orgao)
 	console.info('magistrados',magistrados)
 	console.info('magistrado',magistrado)
+	/*
 	*/	
 
 	if(!magistrado) return
