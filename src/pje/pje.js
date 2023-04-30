@@ -65,6 +65,10 @@ function obterDadosDoNumeroDoProcesso(numero){
 async function pjeOtimizarConclusaoAMagistrado(){
 
 	let selecao = await esperar('[placeholder="Magistrado"]',true)
+	let planilha = await trt15ApiConsultaPlanilhaJuizosPorFinalDoProcesso()
+	console.debug('planilha',planilha)
+	
+
 
 	await esperar('pje-concluso-tarefa-botao',true,true)
 

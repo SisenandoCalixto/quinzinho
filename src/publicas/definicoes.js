@@ -251,10 +251,8 @@ function obterDominioTribunal(){
 }
 
 
-function googleApiPlanilhaChave(){
-
+function apiGooglePlanilhas(){
 	return decodificar('065073122097083121068122090108069076085073107051120097050099108049101097067085056072052114079072104071083109099086111')
-
 }
 
 

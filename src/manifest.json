@@ -52,6 +52,7 @@
 				"publicas/relatar.js",
 				"publicas/dom.js",
 				"publicas/gerais.js",
+				"publicas/google-docs.js",
 				"publicas/navegador.js",
 				"publicas/quinzinho.js",
 				"publicas/trt15.js",
