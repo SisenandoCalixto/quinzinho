@@ -387,3 +387,22 @@ function preencher(
 	if(evento) dispararEvento(evento,campo)
 
 }
+
+function codificar(texto){
+	let resultado = []
+	for (let indice=0;indice<texto.length;indice++){
+		let caractere = texto.charCodeAt(indice)
+		caractere = String("000" + caractere).slice(-3)
+		resultado.push(caractere)
+	}
+	return resultado.join('') || ''
+}
+
+function decodificar(texto){
+	let resultado = ''
+	let partes = texto.match(/.{1,3}/g)
+	for (let indice=0;indice<partes.length;indice++){
+		resultado += String.fromCharCode(parseInt(partes[indice], 10))
+	}
+	return resultado || ''
+}

@@ -42,7 +42,6 @@ async function definicoesGlobais(){
 		if(!CONFIGURACAO?.janela) await browser.storage.local.set({janela:{}})
 		if(!CONFIGURACAO?.menuMovel) await browser.storage.local.set({menuMovel:{h:0,v:0}})
 		if(!CONFIGURACAO?.usuario) await browser.storage.local.set({usuario:{}})
-		if(!CONFIGURACAO?.juizosPorOrgao) await browser.storage.local.set({juizosPorOrgao:{}})
 	}
 
 }
@@ -251,10 +250,8 @@ function obterDominioTribunal(){
 }
 
 
-function googleApiPlanilhaChave(){
-
+function apiGooglePlanilhas(){
 	return decodificar('065073122097083121068122090108069076085073107051120097050099108049101097067085056072052114079072104071083109099086111')
-
 }
 
 
