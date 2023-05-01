@@ -1,5 +1,5 @@
 async function apiGooglePlanilhaConsultar(id){
-	let url = encodeURI('https://sheets.googleapis.com/v4/spreadsheets/' + id + '/values/Juízos por Final do Processo!A3:C?key=' + apiGooglePlanilhas())
+	let url = encodeURI('https://sheets.googleapis.com/v4/spreadsheets/' + id + '/values/Juízos por Final do Processo!A4:C?key=' + apiGooglePlanilhas())
 	let resposta = 	await fetch(url,{
 		"credentials":"include",
 		"method":"GET",

@@ -1,9 +1,3 @@
-/**
- * pje/pje.js
- * pje/api.js
- * pje/painel-global.js
- */
-
 async function pje(){
 
 	console.info('JANELA:',JANELA)
@@ -65,56 +59,31 @@ function obterDadosDoNumeroDoProcesso(numero){
 async function pjeOtimizarConclusaoAMagistrado(){
 
 	let selecao = await esperar('[placeholder="Magistrado"]',true)
-	let planilha = await trt15ApiConsultaPlanilhaJuizosPorFinalDoProcesso()
-	console.debug('planilha',planilha)
-	
-
-
+	let juizosPorFinalDoProcesso = await trt15ApiConsultaPlanilhaJuizosPorFinalDoProcesso()
 	await esperar('pje-concluso-tarefa-botao',true,true)
-
-	let juizosPorOrgao = CONFIGURACAO?.juizosPorOrgao || ''
 	let orgaoJulgador = PROCESSO?.origem || ''
-	let orgao = 'orgao' + orgaoJulgador
-	let magistrados = juizosPorOrgao[orgao] || []
-	let magistrado = magistrados[PROCESSO.final] || ''
+	let juizos = juizosPorFinalDoProcesso.filter(juizo => juizo.v.includes(orgaoJulgador)) || ''
+	let juizo = juizos.filter(juizo => juizo.f.includes(PROCESSO.final))[0] || ''
+	let magistrado = juizo.j || ''
 	let vara = VARAS.filter(vara => vara.unidade.includes(orgaoJulgador))[0] || ''
-
-
-	console.info('vara',vara)
-	console.info('juizosPorOrgao',juizosPorOrgao)
-	console.info('orgaoJulgador',orgaoJulgador)
-	console.info('orgao',orgao)
-	console.info('magistrados',magistrados)
-	console.info('magistrado',magistrado)
-	/*
-	*/
-
 	clicar('[placeholder="Magistrado"]')
-
 	let ancestral = await esperar('div.dados-conclusao',true,true)
 	let texto = 'Seleionei o nome ' + magistrado + ' porque, em minhas configurações, você o associou ao final do processo "' + PROCESSO.final + '", para a ' + vara.descricao + ' (' + orgaoJulgador + ')'
-	
 	if(!magistrado) texto = 'Você ainda não definiu configurações para o final do processo "' + PROCESSO.final + '" da ' + vara.descricao + ' (' + orgaoJulgador + ')'
-
 	if(PROCESSO?.redistribuicoes){
 		texto = "PROCESSO COM REDISTRIBUIÇÃO\n"
 		PROCESSO.redistribuicoes.forEach(redistribuicao => {
 			let data = new Date(redistribuicao.dataHoraRedistribuicao)
 			let tipo = redistribuicao?.tipoRedistribuicao || ''
 			let orgao = redistribuicao?.orgaoJulgadorAnterior?.descricao || ''
-			let informacao = "\n" + 'Em ' + data.toLocaleDateString() + ', por ' + tipo + ', para ' + orgao
+			let informacao = "\n" + 'Em ' + data.toLocaleDateString() + ', por ' + tipo + ', de ' + orgao
 			texto += informacao
 		})
 	}
-	
 	let quinzinho = criarQuinzinhoInformativo('quinzinho-informacoes-conclusao-ao-magistrado',ancestral,texto)
-
-
 	if(!magistrado) return
 	if(selecao.textContent.includes(magistrado)) return
-
 	pjeSelecionarOpcaoPorTexto(magistrado,true)
-
 }
 
 async function pjeSelecionarOpcaoPorTexto(
@@ -122,7 +91,6 @@ async function pjeSelecionarOpcaoPorTexto(
 	parcial=false
 ){
 	if(!texto) return ''
-	await aguardar(500)
 	await esperar('mat-option',true,true)
 	let opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText == texto)[0] || ''
 	if(!opcao){
@@ -135,7 +103,6 @@ async function pjeSelecionarOpcaoPorTexto(
 async function obterOrgaosJulgadores(){
 
 	let orgaosJulgadores = await pjeApiObterOrgaosJulgadores()
-	console.debug('orgaosJulgadores',orgaosJulgadores)
 	
 	let orgaos = []
 
@@ -156,7 +123,6 @@ async function obterOrgaosJulgadores(){
 	orgaos = orgaos.sort((a, b) => {
     return (a.id - b.id)
 	})
-	console.debug('orgaos',orgaos)
 
 }
 

@@ -157,10 +157,10 @@ function abrirPaginaConfiguracaoDoUsuario(){
 function abrirPaginaConfiguracoesJuizo(){
 
 	criarJanela(
-		caminho('navegador/pje-perfis/pagina.htm'),
+		caminho(LINK.google.planilhas + '/d/1yiFpchE501er1aAAsjGCSums9zhD1IoIO3vlWyWREhI'),
 		'',
 		700,
-		700,
+		900,
 		0,
 		0,
 		'detached_panel'

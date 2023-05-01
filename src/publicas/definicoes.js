@@ -42,7 +42,6 @@ async function definicoesGlobais(){
 		if(!CONFIGURACAO?.janela) await browser.storage.local.set({janela:{}})
 		if(!CONFIGURACAO?.menuMovel) await browser.storage.local.set({menuMovel:{h:0,v:0}})
 		if(!CONFIGURACAO?.usuario) await browser.storage.local.set({usuario:{}})
-		if(!CONFIGURACAO?.juizosPorOrgao) await browser.storage.local.set({juizosPorOrgao:{}})
 	}
 
 }
