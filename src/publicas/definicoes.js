@@ -190,7 +190,7 @@ function definirLinks(){
 		protocolo = 'https'
 	){
 		if(subdominio) subdominio = subdominio + '.'
-		return encodeURI(protocolo + '://' + subdominio + '.' + url.dominio + '/' + caminho)
+		return encodeURI(protocolo + '://' + subdominio + url.dominio + '/' + caminho)
 	}
 
 

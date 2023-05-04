@@ -68,8 +68,8 @@ async function pjeOtimizarConclusaoAMagistrado(){
 	let vara = VARAS.filter(vara => vara.unidade.includes(orgaoJulgador))[0] || ''
 	clicar('[placeholder="Magistrado"]')
 	let ancestral = await esperar('div.dados-conclusao',true,true)
-	let texto = 'Seleionei o nome ' + magistrado + ' porque, em minhas configurações, você o associou ao final do processo "' + PROCESSO.final + '", para a ' + vara.descricao + ' (' + orgaoJulgador + ')'
-	if(!magistrado) texto = 'Você ainda não definiu configurações para o final do processo "' + PROCESSO.final + '" da ' + vara.descricao + ' (' + orgaoJulgador + ')'
+	let texto = 'Seleionei o nome ' + magistrado + ' porque, em minhas configurações, ele está associado ao final do processo "' + PROCESSO.final + '", para a ' + vara.descricao + ' (' + orgaoJulgador + ')'
+	if(!magistrado) texto = 'Ainda não foram definidas configurações para o final do processo "' + PROCESSO.final + '" da ' + vara.descricao + ' (' + orgaoJulgador + ')'
 	if(PROCESSO?.redistribuicoes){
 		texto = "PROCESSO COM REDISTRIBUIÇÃO\n"
 		PROCESSO.redistribuicoes.forEach(redistribuicao => {
@@ -81,6 +81,7 @@ async function pjeOtimizarConclusaoAMagistrado(){
 		})
 	}
 	let quinzinho = criarQuinzinhoInformativo('quinzinho-informacoes-conclusao-ao-magistrado',ancestral,texto)
+	//criarBotao('configuracoes-de-juizo-por-final-de-processo','',quinzinho,'Configurações de Juízo por Final de Processo','',abrirPaginaConfiguracoesJuizo)
 	if(!magistrado) return
 	if(selecao.textContent.includes(magistrado)) return
 	pjeSelecionarOpcaoPorTexto(magistrado,true)
