@@ -68,7 +68,7 @@ async function pjeOtimizarConclusaoAMagistrado(){
 	let vara = VARAS.filter(vara => vara.unidade.includes(orgaoJulgador))[0] || ''
 	clicar('[placeholder="Magistrado"]')
 	let ancestral = await esperar('div.dados-conclusao',true,true)
-	let texto = 'Seleionei o nome ' + magistrado + ' porque, em minhas configurações, ele está associado ao final do processo "' + PROCESSO.final + '", para a ' + vara.descricao + ' (' + orgaoJulgador + ')'
+	let texto = 'Recomendo o nome ' + magistrado + ' porque, em minhas configurações, ele está associado ao final do processo "' + PROCESSO.final + '", para a ' + vara.descricao + ' (' + orgaoJulgador + ')'
 	if(!magistrado) texto = 'Ainda não foram definidas configurações para o final do processo "' + PROCESSO.final + '" da ' + vara.descricao + ' (' + orgaoJulgador + ')'
 	if(PROCESSO?.redistribuicoes){
 		texto = "PROCESSO COM REDISTRIBUIÇÃO\n"
@@ -93,6 +93,7 @@ async function pjeSelecionarOpcaoPorTexto(
 ){
 	if(!texto) return ''
 	await esperar('mat-option',true,true)
+	await aguardar(500)
 	let opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText == texto)[0] || ''
 	if(!opcao){
 		if(parcial) opcao = [...document.querySelectorAll('mat-option')].filter(opcao => opcao.innerText.includes(texto))[0] || ''
