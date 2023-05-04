@@ -132,7 +132,7 @@ async function programa(){
 		criarBotaoDoMenu(
 			'intranet',
 			'Intranet',
-			() => criarJanela(LINK.pje.intranet)
+			() => criarJanela(LINK.tribunal.intranet)
 		)
 
 		secao = selecionar('#relatorios')
