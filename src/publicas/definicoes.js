@@ -133,6 +133,7 @@ function definirLinks(){
 	link.github = 'https://github.com/SisenandoCalixto/quinzinho/'
 	link.google = obterLinkGoogle()
 	link.pje = obterLinkPje()
+	link.pjecor = 'https://corregedoria.pje.jus.br'
 	link.tribunal = obterLinkTribunal()
 	link.wikivt = 'https://fluxonacional.jt.jus.br/'
 

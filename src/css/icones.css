@@ -240,6 +240,17 @@ quinzinho-botao.proad{
 	;
 }
 
+quinzinho-botao.pjecor{
+	background:
+		var(--quinzinho-gradiente-branco-preto),
+		linear-gradient(
+			rgba(var(--quinzinho-cor-indigo),0.5)   0%,
+			rgba(var(--quinzinho-cor-indigo),0.5) 100%
+		)
+		rgba(var(--quinzinho-cor-azul),1)
+	;
+}
+
 quinzinho-botao.pje-calc{
 	background:
 		var(--quinzinho-gradiente-branco-preto),

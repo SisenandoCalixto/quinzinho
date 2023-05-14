@@ -125,6 +125,12 @@ async function programa(){
 			'PROAD'
 		)
 		criarBotaoDoMenu(
+			'pjecor',
+			'PJeCor',
+			() => criarJanela(LINK.pjecor),
+			'PJeCor'
+		)
+		criarBotaoDoMenu(
 			'pje-calc',
 			'PJeCalc',
 			() => criarJanela(LINK.pje.calc)
