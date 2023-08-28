@@ -106,7 +106,7 @@ async function programa(){
 		criarBotaoDoMenu(
 			'exe15',
 			'Exe15',
-			() => criarJanela(LINK.tribunal.exe15)
+			() => criarJanela(LINK.tribunal.exe15.raiz)
 		)
 		criarBotaoDoMenu(
 			'correios',

@@ -182,8 +182,6 @@ function abrirPagina(
 }
 
 
-
-
 async function copiar(texto){
 
 	relatar('Copiando texto... ',texto)
@@ -405,4 +403,14 @@ function decodificar(texto){
 		resultado += String.fromCharCode(parseInt(partes[indice], 10))
 	}
 	return resultado || ''
+}
+
+
+function contarCaracteres(texto){
+	if(!texto) return 0
+	if(texto?.length){
+		let caracteres = texto.length || 0
+		if(caracteres > 0) return caracteres
+	}
+	else return 0
 }

@@ -150,7 +150,7 @@ function definirLinks(){
 		url.dominio = obterDominioTribunal()
 		url.cnc = montarUrl(url,'','institucional/corregedoria/consolidacao-das-normas-da-corregedoria')
 		url.designacoes = montarUrl(url,'satelites','designacoes/index.jsp?tipoConsulta=21')
-		url.exe15 = montarUrl(url,'satelites','nucleo_execucao')
+		url.exe15 = obterLinkExe15()
 		url.intranet = montarUrl(url,'satelites','aplicacoesExtranet')
 		url.portal = montarUrl(url)
 		url.proad = montarUrl(url,'proad')
@@ -159,6 +159,14 @@ function definirLinks(){
 		return url
 	}
 	
+	function obterLinkExe15(){
+		let url = {}
+		url.dominio = 'trt15.jus.br'
+		url.raiz = montarUrl(url,'satelites','nucleo_execucao')
+		url.diligencias = montarUrl(url,'satelites','nucleo_execucao/f/t/consultardiligenciascon')
+		return url
+	}
+
 	function obterLinkGoogle(){
 		let usuario = CONFIGURACAO?.usuario?.email || '0'
 		let url = {}

@@ -45,6 +45,7 @@
 				"css/cores.css",
 				"css/icones.css",
 				"css/informacoes.css",
+				"css/menu-arrastavel.css",
 				"css/quinzinho.css"
 			],
 			"js":[
@@ -58,6 +59,7 @@
 				"publicas/trt15.js",
 				"iniciar.js",
 				"ad-hoc.js",
+				"exe15.js",
 				"pje/api.js",
 				"pje/pje.js"
 			],

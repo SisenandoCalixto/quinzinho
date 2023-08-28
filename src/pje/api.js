@@ -12,50 +12,10 @@ function pjeApiRequisicaoConfiguracoes(){
 }
 
 
-async function pjeApiObterPerfis(){
-	let url = LINK.pje.api.seguranca + 'token/perfis'
-	relatar('Consultando API:',url)
-	try{
-		let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
-		let erro = pjeApiVerificarErro(resposta)
-		if(erro) throw new Error(erro)
-		let dados = await resposta.json()
-		relatar('Dados:',dados)
-		return dados || ''
-	}
-	catch(erro){
-		console.error('-> Erro: ', erro)
-		if(erro.message.includes('Unauthorized')){
-			document.addEventListener(
-				'click',
-				() => {
-					window.location.href = JANELA
-				}
-			)
-			alert(TEXTO.autentique)
-			criarJanela(LINK.pje.raiz,'pjePainel')
-		}
-		if(erro.message.includes('NetworkError when attempting to fetch resource')){
-			document.addEventListener(
-				'click',
-				() => {
-					window.location.href = JANELA
-				}
-			)
-			alert(TEXTO.permissoes)
-			browser.runtime.openOptionsPage()
-		}
-		return false
-	}
-}
-
-
 async function pjeApiObterProcessoDadosPrimarios(id){
 	let url = LINK.pje.api.comum + 'processos/id/' + id
 	relatar('Consultando API:',url)
 	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
-	let erro = pjeApiVerificarErro(resposta)
-	if(erro) throw new Error(erro)
 	let dados = await resposta.json()
 	relatar('Dados:',dados)
 	return dados
@@ -65,14 +25,15 @@ async function pjeApiObterProcessoRedistribuicoes(id){
 	let url = LINK.pje.api.comum + 'processos/redistribuicao?idProcesso=' + id
 	relatar('Consultando API:',url)
 	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
-	let erro = pjeApiVerificarErro(resposta)
-	if(erro) throw new Error(erro)
 	let dados = await resposta.json()
+	console.debug('dados',dados)
 	if(vazio(dados)) return ''
 	relatar('Dados:',dados)
-	dados = dados.sort((a, b) => {
-    return (a.dataHoraRedistribuicao - b.dataHoraRedistribuicao)
-	})
+	if(Array.isArray(dados)){
+		dados = dados?.sort((a, b) => {
+			return (a.dataHoraRedistribuicao - b.dataHoraRedistribuicao)
+		})
+	}
 	return dados
 }
 
@@ -80,8 +41,6 @@ async function pjeApiObterOrgaosJulgadores(id=''){
 	let url = LINK.pje.api.comum + 'orgaosjulgadores/' + id
 	relatar('Consultando API:',url)
 	let resposta = await fetch(url,pjeApiRequisicaoConfiguracoes)
-	let erro = pjeApiVerificarErro(resposta)
-	if(erro) throw new Error(erro)
 	let dados = await resposta.json()
 	relatar('Dados:',dados)
 	return dados
