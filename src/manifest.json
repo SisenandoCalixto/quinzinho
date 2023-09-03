@@ -3,7 +3,7 @@
 	"short_name":				"Quinzinho",
 	"description":			"Esta extensão se destina a oferecer ferramentas de gestão de processos e otimização de trabalhos no âmbito do Tribunal Regional do Trabalho da 15ª Região.",
 	"manifest_version":	2,
-	"version":					"1.6",
+	"version":					"1.7",
 	"author":						"Sisenando Gomes Calixto de Sousa",
 
 	"browser_specific_settings":{
@@ -59,6 +59,7 @@
 				"publicas/trt15.js",
 				"iniciar.js",
 				"ad-hoc.js",
+				"selecao.js",
 				"exe15.js",
 				"pje/api.js",
 				"pje/pje.js"

@@ -27,8 +27,8 @@ async function otimizar(){
 	//ad-hoc.js
 	adHoc()
 	
-	//quinzinho.js
-	pjePainelCriarMenuArrastavel()
+	//selecao.js
+	assistenteDeSelecao()
 	
 	//pje/pje.js
 	pje()
