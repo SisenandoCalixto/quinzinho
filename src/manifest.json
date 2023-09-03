@@ -62,7 +62,8 @@
 				"selecao.js",
 				"exe15.js",
 				"pje/api.js",
-				"pje/pje.js"
+				"pje/pje.js",
+				"sisbajud.js"
 			],
 			"all_frames":					true,
 			"match_about_blank":	true,
