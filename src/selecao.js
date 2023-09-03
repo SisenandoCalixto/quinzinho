@@ -32,22 +32,18 @@ async function assistenteDeSelecao(){
 		let menu = criarMenu()
 				
 		if(documento || pjeNumeroDoProcessoCompleto){
-			criarBotao('exe15-consultar','','Consultar dado selecionado no Exe15',() => exe15ConsultarDiligencia(pjeNumeroDoProcessoCompleto,documento))
+			criarBotao('exe15-consultar','','Consultar dado selecionado no Exe15',() => exe15DiligenciaConsultar(pjeNumeroDoProcessoCompleto,documento))
 		}
 
 
-		function exe15ConsultarDiligencia(processo,documento){
+		function exe15DiligenciaConsultar(processo,documento){
 			let url = encodeURI(LINK.tribunal.exe15.diligencias+'?processo='+processo+'&documento='+documento)
 			abrirPagina(url)
 		}
 
 		function criarMenu(){
 			let elemento = criar('quinzinho-assistente-de-selecao','quinzinho-assistente-de-selecao')
-			elemento.style = `
-			left:${dimensao.esquerda};
-			top:${dimensao.topo};
-			opacity:1
-			`
+			elemento.style = `left:${dimensao.esquerda};top:${dimensao.topo};opacity:1`
 			elemento.addEventListener('click',fecharMenu)
 			return elemento
 		}

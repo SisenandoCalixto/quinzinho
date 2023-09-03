@@ -110,14 +110,6 @@ async function pjePainelCriarMenuArrastavel() {
 }
 
 
-async function exe15DiligenciaConsultar(){
-	let selecao = await obterSelecao()
-	let documento = selecao?.documento || ''
-	let processo = selecao?.pjeNumeroDoProcessoCompleto || ''
-	let url = LINK.tribunal.exe15.diligencias+'?processo='+processo+'&documento='+documento
-	abrirPagina(encodeURI(url))
-}
-
 async function obterSelecao(){
 	let selecao = document.getSelection() || ''
 	if(!selecao) return ''
