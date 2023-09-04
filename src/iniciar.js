@@ -35,8 +35,5 @@ async function otimizar(){
 	
 	//exe15.js
 	exe15()
-
-	//sisbajud.js
-	sisbajud()
 }
 
